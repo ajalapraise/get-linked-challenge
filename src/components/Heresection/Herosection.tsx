@@ -47,7 +47,7 @@ const Herosection = () => {
     };
 
     return (
-        <div className={`flex justify-evenly px-20 pt-14 border-b-[1px] border-[#FFFFFF2E] w-full`}>
+        <div className={`flex justify-evenly px-24 pt-14 border-b-[1px] border-[#FFFFFF2E] w-full`}>
             <div className={`w-full `}>
                 <div className={``}>
                     <div className="mt-5 ml-10">
@@ -85,10 +85,10 @@ const Herosection = () => {
             <div>
                 <div className="relative">
                     <div className="mt-[-2rem]">
-                        <h2 className={`text-[25px] font-bold`}>Igniting a Revolution in HR innovation</h2>
+                        <h2 className={`text-[24px] font-bold`}>Igniting a Revolution in HR innovation</h2>
                     </div>
-                    <div className="absolute right-0">
-                        <Image src={underline} width={175} height={10} alt="" />
+                    <div className="absolute right-2">
+                        <Image src={underline} width={170} height={10} alt="" />
                     </div>
                 </div>
                 <div className="mt-7">

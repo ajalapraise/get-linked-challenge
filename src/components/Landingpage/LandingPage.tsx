@@ -2,14 +2,22 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { revalia } from "@/styles/font";
+import { FAQData, FAQProps, FAQlayout } from '../Faq/FaqDetails';
+import { Button } from '../Button/Button';
 
 import introImg from '../../../public/landingPage/intro-img.png'
 import purpleStarImg from '../../../public/landingPage/star-purple-img.png'
+import whiteStarImg from '../../../public/landingPage/star-white-img.png'
+import ashStarImg from '../../../public/landingPage/star-ash-img.png'
 import rulesImg from '../../../public/landingPage/rules-img.png'
 import criteriaImg from '../../../public/landingPage/criteria-img.png'
-import { Button } from '../Button/Button';
+import question from '../../../public/landingPage/question.png'
+import timeline from '../../../public/landingPage/timeline-img.png'
+import prize from '../../../public/landingPage/prize-img.png'
+import gold from '../../../public/landingPage/gold-img.png'
+import silver from '../../../public/landingPage/silver-img.png'
+import bronze from '../../../public/landingPage/bronze-img.png'
 
-import { FAQData, FAQProps, FAQlayout } from '../Faq/FaqDetails';
 
 
 export const Intro = () => {
@@ -36,7 +44,6 @@ export const Intro = () => {
     )
 }
 
-
 export const Rules = () => {
     return (
         <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-4 flex justify-between space-x-10 items-center`}>
@@ -46,6 +53,9 @@ export const Rules = () => {
                 <p className='w-[420px]'>
                     {`Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!`}
                 </p>
+                <div className='absolute top-[-5rem] right-40'>
+                    <Image src={ashStarImg} width={22} alt="" />
+                </div>
 
 
             </div>
@@ -118,27 +128,29 @@ export const Criteria = () => {
 }
 
 export const FAQ = () => {
-    const displayedFAQs = FAQData.slice(0, 4);
-
     return (
-        <div>
-            <div className={`flex justify-center  flex-col  pt-[50px] pb-[150px] px-[60px] bg-purpleBase text-white  `}>
-                <div className={`my-2 flex flex-col items-center text-center`}>
-                    <h1 className={`text-xl font-[100] ${revalia.className}`}>
-                        Frequently Asked Questions (FAQs)
+        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-4 flex space-x-10 relative`}>
+            <div className={`flex justify-center w-[500px] py-20 flex-col  text-white`}>
+                <div className={`my-2 flex flex-col space-y-7 mb-10   `}>
+                    <h1 className={`text-[27px] font-[100] ${revalia.className}`}>
+                        Frequently Asked <br /> <span className='text-purple5'>Questions</span>
                     </h1>
-                    <p className={` w-[650px]  font-normal mt-10 mb-[60px] text-base`}>
-                        These section provides answers to common questions that visitors might have about the website, its products, services, policies, or any other relevant topics.
+                    <p className={`font-normal text-base w-[370px] `}>
+                        We got answers to the questions that you might
+                        want to ask about <span className='font-extrabold'>getlinked Hackathon 1.0</span>
                     </p>
+                </div>
+                <div className='absolute top-16 left-16'>
+                    <Image src={purpleStarImg} width={20} alt="" />
                 </div>
 
 
-                <div className={`flex s flex-col  justify-center`}>
-                    <div className={`flex items-center flex-col  justify-center`}>
-                        <div className={` flex justify-around w-[700px]  bg-[#FECD83] p-3 flex-col font-normal space-y-5 `}>
-                            {displayedFAQs.map((item, id) => (
-                                <div key={id} className={`bg-white flex rounded-lg justify-center p-2 text-black `}>
-                                    <div className={`w-[600px] px-3`}>
+                <div className={`flex  flex-col  justify-center`}>
+                    <div className={`flex  flex-col  justify-center`}>
+                        <div className={` flex justify-around flex-col font-normal `}>
+                            {FAQData.map((item, id) => (
+                                <div key={id} className={` `}>
+                                    <div className={`border-b-[1px] border-[#D434FE] mb-2 pb-1`}>
                                         <FAQlayout question={item.question} answer={item.answer} id={0} />
                                     </div>
                                 </div>
@@ -146,23 +158,115 @@ export const FAQ = () => {
                         </div>
                     </div>
 
+                </div>
+            </div>
+            <div className=' flex items-center '>
+                <Image src={question} width={750} alt="" />
+            </div>
+        </div>
+    )
+}
 
-                    <div className={` flex p-3 ml-[250px] mt-10 font-normal  `}>
-                        <Link href='/faq'>
-                            <Button
-                                btnValue='See more'
-                                className=' border-[1px] w-[150px] h-[55px]  px-4 border-purpleBase   text-white font-extralight text-base hover:bg-yellow4 bg-yellow6'
-                            />
-                        </Link>
-                    </div>
+export const Timeline = () => {
+    return (
+        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col space-y-10 relative `}>
+            <div className={`mb-10 flex items-center space-y-5 flex-col text-center`}>
+                <h1 className={`text-xl  font-extrabold ${revalia.className}`}>Timeline</h1>
+                <h4 className={`w-[400px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>
+            </div>
+            <div className={` flex justify-center  space-x-10`}>
+                <div>
+                    <ul className='  text-right'>
+                        <li className={` w-[350px] mt-20 flex flex-col justify-end items-end  h-[100px] space-y-3`}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>Hackathon Announcement</h1>
+                            <h2 className={`text-[13px] font-bold `}>The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</h2>
+                        </li>
+                        <li className={`w-[350px] mt-8 flex justify-end items-end  h-[100px] `}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold `}>November 18, 2023</h1>
+                        </li>
+                        <li className={` w-[350px] flex mt-14 flex-col  items-end justify-end  h-[100px] space-y-3`}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>Teams Registration ends</h1>
+                            <h2 className={`text-[13px] font-bold`}>Interested Participants are no longer Allowed to register</h2>
+                        </li>
+                        <li className={` w-[350px] flex mt-4 justify-end items-end h-[100px] `}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>November 18, 2023</h1>
+                        </li>
+                        <li className={` w-[350px] mt-20 flex flex-col justify-end items-end h-[100px] space-y-3`}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>Getlinked Hackathon 1.0 Offically Begins</h1>
+                            <h2 className={`text-[13px] font-bold `}>Accepted teams can now proceed to build their ground breaking skill driven solutions</h2>
+                        </li>
+                        <li className={` w-[350px] flex items-end h-[100px] justify-end`}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>November 18, 2023</h1>
+                        </li>
+                    </ul>
+                </div>
+                <div className=''>
+                    <Image src={timeline} width={45} alt="" />
 
                 </div>
-
-
+                <div>
+                    <ul className=' text-left '>
+                        <li className={` w-[350px] mt-16 flex justify-start items-end h-[100px] `}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>November 18, 2023</h1>
+                        </li>
+                        <li className={` w-[350px] flex mt-20 flex-col justify-center  h-[100px] space-y-3`}>
+                            <h1 className={`text-[#D434FE] text-[22px] font-extrabold`}>Teams Registration begins</h1>
+                            <h2 className={`text-[13px]  font-bold `}>Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</h2>
+                        </li>
+                        <li className={` w-[350px] flex mt-0 items-end  h-[100px]`}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>November 18, 2023</h1>
+                        </li>
+                        <li className={` w-[350px] flex mt-16 flex-col justify-center h-[100px] space-y-3`}>
+                            <h1 className={`text-[#D434FE] text-[22px] font-extrabold`}>Announcement of the accepted teams and ideas</h1>
+                            <h2 className={`text-[13px] font-bold`}>All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced</h2>
+                        </li>
+                        <li className={`w-[350px] mt-3  flex items-end h-[100px]`}>
+                            <h1 className={`text-[#D434FE]  text-[22px] font-extrabold`}>November 18, 2023</h1>
+                        </li>
+                        <li className={` h-[100px] mt-20 w-[350px] flex flex-col justify-center  space-y-3`}>
+                            <h1 className={`text-[#D434FE] text-[22px] font-extrabold`}>Demo Day</h1>
+                            <h2 className={`text-[13px] font-bold `}>Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day</h2>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-
+            <div className='absolute top-[200px] left-[300px]'>
+                <Image src={purpleStarImg} width={20} alt="" />
             </div>
+            <div className='absolute right-[270px] top-[590px]'>
+                <Image src={whiteStarImg} width={20} alt="" />
+            </div>
+            <div className='absolute bottom-24 '>
+                <Image src={ashStarImg} width={20} alt="" />
+            </div>
+        </div>
+    )
+}
+
+export const Prizes = () => {
+    return (
+        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex justify-around relative `}>
+            <div className='w-1/3'>
+                <Image src={prize} width={350} alt="" />
+            </div>
+            <div className='w-1/3'>
+                <div>
+                    <h1 className={`${revalia.className}`}>Prizes and <br /> <span className='text-purple5'>Rewards</span></h1>
+                    <p>Highlight of the prizes or rewards for winners and for participants.</p>
+                </div>
+                <div className='flex'>
+                    <div>
+                        <Image src={silver} width={50} alt="" />
+                    </div>
+                    <div>
+                        <Image src={gold} width={50} alt="" />
+                    </div>
+                    <div>
+                        <Image src={bronze} width={50} alt="" />
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }

@@ -39,11 +39,6 @@ export const FAQData = [
         id: 5
     },
 
-    {
-        question: ' "Is it mandatory to have programming or technical skills to participate in a hackathon?"',
-        answer: 'Hackathons encourage collaboration among individuals with various expertise, including designers, marketers, project managers, and domain experts, to create well-rounded and innovative projects.',
-        id: 6
-    },
 ]
 
 
@@ -58,8 +53,8 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
 
     return (
         <div className=" min-h-[70px] flex flex-col  justify-center  my-0 ">
-            <div className="flex  items-center  justify-between cursor-pointer w-full">
-                <div className={` font-extrabold text-[20px]`}>
+            <div className="flex  items-center  justify-between cursor-pointer  ">
+                <div className={` font-[900] text-base`}>
                     <h3 >
                         {question}
 
@@ -67,15 +62,15 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
                 </div>
 
                 <div
-                    className={`transition-transform transform text-lg bg-black text-white rounded-2xl p-2 hover:bg-grey4  ${isOpen ? 'rotate-0 justify-end' : '-rotate-0'}`}
+                    className={`transition-transform transform text-lg bg-black text-[#D434FE] rounded-2xl hover:text-[white]  ${isOpen ? 'rotate-0 justify-end' : '-rotate-0'}`}
                     onClick={toggleOpen}
                 >
-                    {isOpen ? <><AiOutlineMinus /></> : <><AiOutlineMinus /></>}
+                    {isOpen ? <><AiOutlineMinus /></> : <><AiOutlinePlus /></>}
                 </div>
 
             </div>
-            <div className={`flex  items-center w-[500px]`}>
-                {isOpen && <p className={`my-2 text-[13px] font-normal ${className} flex`}>{answer}</p>}
+            <div className={`flex  items-center `}>
+                {isOpen && <p className={`my-2 text-[13px] w-[360px] font-normal ${className} flex`}>{answer}</p>}
             </div>
 
         </div>
