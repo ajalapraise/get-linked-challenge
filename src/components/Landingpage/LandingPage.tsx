@@ -272,3 +272,18 @@ export const Prizes = () => {
         </div>
     )
 }
+
+export const Partners = () => {
+    return (
+        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col items-center  relative `}>
+            <div className='flex flex-col text-center space-y-5 items-center'>
+                <h1 className={`text-lg font-extrabold ${revalia.className}`}>Partners and Sponsors</h1>
+                <h5 className='w-[500px] font-normal'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h5>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+    )
+}
