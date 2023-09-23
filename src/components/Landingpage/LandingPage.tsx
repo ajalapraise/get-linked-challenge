@@ -281,7 +281,7 @@ export const Partners = () => {
                 <h5 className='w-[500px] font-normal'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h5>
 
             </div>
-            <div>
+            <div className='border-[1px] border-[#D434FE] w-[900px]'>
 
             </div>
         </div>
