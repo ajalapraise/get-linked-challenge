@@ -245,24 +245,26 @@ export const Timeline = () => {
 
 export const Prizes = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex justify-around relative `}>
+        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex items-center justify-around relative `}>
             <div className='w-1/3'>
-                <Image src={prize} width={350} alt="" />
+                <Image src={prize} width={400} alt="" />
             </div>
-            <div className='w-1/3'>
-                <div>
+            <div className='w-2/3 space-y-10'>
+                <div className={`flex flex-col text-left mx-auto w-[400px]`}>
                     <h1 className={`${revalia.className}`}>Prizes and <br /> <span className='text-purple5'>Rewards</span></h1>
                     <p>Highlight of the prizes or rewards for winners and for participants.</p>
                 </div>
-                <div className='flex'>
-                    <div>
-                        <Image src={silver} width={50} alt="" />
-                    </div>
-                    <div>
-                        <Image src={gold} width={50} alt="" />
-                    </div>
-                    <div>
-                        <Image src={bronze} width={50} alt="" />
+                <div className='flex items-center justify-center w-[700px]'>
+                    <div className='flex items-center justify-center'>
+                        <div >
+                            <Image src={silver} width={150} alt="" />
+                        </div>
+                        <div>
+                            <Image src={gold} width={200} alt="" />
+                        </div>
+                        <div>
+                            <Image src={bronze} width={150} alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
