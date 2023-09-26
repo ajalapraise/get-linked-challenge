@@ -17,6 +17,12 @@ import prize from '../../../public/landingPage/prize-img.png'
 import gold from '../../../public/landingPage/gold-img.png'
 import silver from '../../../public/landingPage/silver-img.png'
 import bronze from '../../../public/landingPage/bronze-img.png'
+import libertyAssured from '../../../public/landingPage/liberty-assured.svg'
+import libertyPay from '../../../public/landingPage/liberty-pay.svg'
+import winwise from '../../../public/landingPage/winwise.svg'
+import whispersms from '../../../public/landingPage/whispersms.svg'
+import paybox from '../../../public/landingPage/Paybox.svg'
+import VizualPlus from '../../../public/landingPage/Vizual-Plus.svg'
 
 
 
@@ -249,7 +255,7 @@ export const Prizes = () => {
             <div className='w-1/3'>
                 <Image src={prize} width={400} alt="" />
             </div>
-            <div className='w-2/3 space-y-10'>
+            <div className='w-3/5 space-y-10'>
                 <div className={`flex flex-col text-left mx-auto w-[400px]`}>
                     <h1 className={`${revalia.className}`}>Prizes and <br /> <span className='text-purple5'>Rewards</span></h1>
                     <p>Highlight of the prizes or rewards for winners and for participants.</p>
@@ -257,13 +263,13 @@ export const Prizes = () => {
                 <div className='flex items-center justify-center w-[700px]'>
                     <div className='flex items-center justify-center'>
                         <div >
-                            <Image src={silver} width={150} alt="" />
+                            <Image src={silver} width={145} alt="" />
                         </div>
                         <div>
                             <Image src={gold} width={200} alt="" />
                         </div>
                         <div>
-                            <Image src={bronze} width={150} alt="" />
+                            <Image src={bronze} width={130} alt="" />
                         </div>
                     </div>
                 </div>
@@ -275,15 +281,67 @@ export const Prizes = () => {
 
 export const Partners = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col items-center  relative `}>
+        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col items-center space-y-14 relative `}>
             <div className='flex flex-col text-center space-y-5 items-center'>
                 <h1 className={`text-lg font-extrabold ${revalia.className}`}>Partners and Sponsors</h1>
                 <h5 className='w-[500px] font-normal'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h5>
 
             </div>
-            <div className='border-[1px] border-[#D434FE] w-[900px]'>
+            <div className='border-[1px] border-[#D434FE] flex items-center mx-auto p-20 w-[900px]'>
+                <div className=' flex flex-wrap w-[700px] mx-auto items-center justify-around  p-10'>
+                    <div className='w-1/3 flex justify-center items-center  border-r-[2px] border-[#D434FE] h-[100px] mb-5  '>
+                        <div className='w-2/3 flex justify-center  border-b-[2px] border-[#D434FE] h-[120px] py-2 items-center cursor-pointer '>
+                            <Image src={libertyAssured} width={95} alt="" />
+                        </div>
+
+                    </div>
+                    <div className='w-1/3 flex justify-center items-center  border-r-[2px] border-[#D434FE] h-[100px] mb-5'>
+                        <div className='w-2/3 flex justify-center  border-b-[2px] items-center border-[#D434FE] h-[120px] py-2 cursor-pointer'>
+                            <Image src={libertyPay} width={95} alt="" />
+                        </div>
+
+                    </div>
+                    <div className='w-1/3 flex justify-center items-center h-[100px]  mb-5'>
+                        <div className='w-2/3 flex justify-center  border-b-[2px] items-center border-[#D434FE] h-[120px] py-2 cursor-pointer'>
+                            <Image src={winwise} width={95} alt="" />
+                        </div>
+
+                    </div>
+
+                    <div className='w-1/3 flex justify-center items-center border-r-[2px] border-[#D434FE] h-[100px] '>
+                        <div className='w-2/3 flex justify-center h-[120px] py-2 items-center cursor-pointer'>
+                            <Image src={whispersms} width={95} alt="" />
+                        </div>
+
+                    </div>
+                    <div className='w-1/3 flex justify-center items-center border-r-[2px] border-[#D434FE] h-[100px] '>
+                        <div className='w-2/3 flex justify-center items-center  h-[120px] py-2 cursor-pointer'>
+                            <Image src={paybox} width={95} alt="" />
+                        </div>
+
+                    </div>
+                    <div className='w-1/3 flex justify-center items-center  h-[100px]'>
+                        <div className='w-2/3 flex justify-center   items-center  h-[120px] py-2 cursor-pointer'>
+                            <Image src={VizualPlus} alt="" layout="responsive" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const Privacy = () => {
+    return (
+        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col items-center space-y-14 relative `}>
+            <div>
+
+            </div>
+            <div>
 
             </div>
         </div>
+
     )
 }

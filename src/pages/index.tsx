@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Herosection from "@/components/Heresection/Herosection";
-import { Criteria, FAQ, Intro, Partners, Prizes, Rules, Timeline } from "@/components/Landingpage/LandingPage";
+import { Criteria, FAQ, Intro, Partners, Privacy, Prizes, Rules, Timeline } from "@/components/Landingpage/LandingPage";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
         <Timeline />
         <Prizes />
         <Partners />
+        <Privacy />
       </main>
     </div>
   );
