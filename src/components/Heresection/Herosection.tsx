@@ -8,10 +8,10 @@ import { Button } from "../Button/Button";
 
 import heroImage from "../../../public/herosection/hero-image.png";
 import underline from "../../../public/herosection/underline.png";
-import star from "../../../public/herosection/star.png";
-import linkage from "../../../public/herosection/linkage.png";
-import fire from "../../../public/herosection/fire.png";
-import bulb from "../../../public/herosection/bulb.png";
+import star from "../../../public/herosection/white-star.svg";
+import linkage from "../../../public/herosection/chain.svg";
+import fire from "../../../public/herosection/fire.svg";
+import bulb from "../../../public/herosection/bulb.svg";
 
 const Herosection = () => {
     const [countdown, setCountdown] = useState<{ hours: number; minutes: number; seconds: number }>({
@@ -53,7 +53,7 @@ const Herosection = () => {
                     <div className="mt-5 ml-10">
                         <Image src={star} width={15} height={15} alt="" />
                     </div>
-                    <div className={`mt-14  space-y-5`}>
+                    <div className={`mt-5  space-y-5`}>
                         <div className={`font-extrabold relative text-[45px] ${revalia.className}`}>
                             <h2>getlinked Tech </h2>
                             <div className="flex space-x-3">
@@ -70,7 +70,7 @@ const Herosection = () => {
                         </p>
                     </div>
 
-                    <div className={`flex  items w-[150px] my-4`}>
+                    <div className={`flex  items-center w-[150px] my-4`}>
                         <Link href="/auth">
                             <Button btnValue="Register" />
                         </Link>
@@ -84,15 +84,15 @@ const Herosection = () => {
             </div >
             <div>
                 <div className="relative">
-                    <div className="mt-[-2rem]">
+                    <div className="mt-[-2rem] absolute right-0">
                         <h2 className={`text-[24px] font-bold`}>Igniting a Revolution in HR innovation</h2>
                     </div>
-                    <div className="absolute right-2">
-                        <Image src={underline} width={170} alt="" />
+                    <div className="absolute right-0">
+                        <Image src={underline} width={160} alt="" />
                     </div>
                 </div>
-                <div className="mt-7">
-                    <Image src={heroImage} width={800} height={700} alt="" />
+                <div className="mt-7 relative w-[500px] h-[420px]">
+                    <Image src={heroImage} fill alt="" />
                 </div>
             </div>
         </div >
