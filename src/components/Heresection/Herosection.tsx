@@ -47,55 +47,67 @@ const Herosection = () => {
     };
 
     return (
-        <div className={`flex justify-evenly px-24 pt-16 border-b-[1px] border-[#FFFFFF2E] w-full`}>
-            <div className={`w-full `}>
-                <div className={``}>
-                    <div className="mt-5 ml-10">
-                        <Image src={star} width={15} height={15} alt="" />
-                    </div>
-                    <div className={`mt-5  space-y-5`}>
-                        <div className={`font-extrabold relative text-[45px] ${revalia.className}`}>
-                            <h2>getlinked Tech </h2>
-                            <div className="flex space-x-3">
-                                <h2>Hackathon 1.0 </h2>
-                                <Image src={linkage} width={50} height={50} alt="" />
-                                <Image src={fire} width={45} height={30} alt="" />
+        <div className={`  justify-evenly px-2 md:px-24 pt-16 border-b-[1px] border-[#FFFFFF2E] w-full`}>
+            <div className="text-center md:relative">
+                <div className="mt-[-2rem] md:absolute md:right-0">
+                    <h2 className={`text-sm md:text-[24px] font-bold`}>Igniting a Revolution in
+                        <span>
+                            HR innovation
+                            <div className="hidden md:flex md:justify-end">
+                                <Image src={underline} width={160} alt="" />
                             </div>
-                            <div className="absolute left-[22.5rem] top-[-2.5rem]">
-                                <Image src={bulb} width={40} height={11} alt="" />
+                            <div className=" flex justify-end md:hidden ">
+                                <Image src={underline} width={120} alt="" />
                             </div>
-                        </div>
-                        <p className={`w-[500px] text-[17px]`}>
-                            Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize
-                        </p>
-                    </div>
+                        </span>
 
-                    <div className={`flex  items-center w-[150px] my-4`}>
-                        <Link href="/auth">
-                            <Button btnValue="Register" />
-                        </Link>
-                    </div>
-                    <div className={`font-extrabold text-sm space-x-5 flex `}>
-                        <h1><span className={`text-lg`}>{formatTime(countdown.hours)} </span>H </h1>
-                        <h1><span className={`text-lg`}>{formatTime(countdown.minutes)} </span>M </h1>
-                        <h1><span className={`text-lg`}>{formatTime(countdown.seconds)} </span>S</h1>
-                    </div>
+
+                    </h2>
                 </div>
-            </div >
-            <div>
-                <div className="relative">
-                    <div className="mt-[-2rem] absolute right-0">
-                        <h2 className={`text-[24px] font-bold`}>Igniting a Revolution in HR innovation</h2>
+
+
+            </div>
+            <div className={`w-full flex flex-col md:flex-row`}>
+                <div className={`w-full `}>
+                    <div className={``}>
+                        <div className="mt-5 ml-10">
+                            <Image src={star} width={15} height={15} alt="" />
+                        </div>
+                        <div className={`mt-5  space-y-5`}>
+                            <div className={`font-extrabold relative text-[45px] ${revalia.className}`}>
+                                <h2>getlinked Tech </h2>
+                                <div className="flex space-x-3">
+                                    <h2>Hackathon 1.0 </h2>
+                                    <Image src={linkage} width={50} height={50} alt="" />
+                                    <Image src={fire} width={45} height={30} alt="" />
+                                </div>
+                                <div className="absolute left-[22.5rem] top-[-2.5rem]">
+                                    <Image src={bulb} width={40} height={11} alt="" />
+                                </div>
+                            </div>
+                            <p className={`w-[500px] text-[17px]`}>
+                                Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize
+                            </p>
+                        </div>
+
+                        <div className={`flex  items-center w-[150px] my-4`}>
+                            <Link href="/auth">
+                                <Button btnValue="Register" />
+                            </Link>
+                        </div>
+                        <div className={`font-extrabold text-sm space-x-5 flex `}>
+                            <h1><span className={`text-lg`}>{formatTime(countdown.hours)} </span>H </h1>
+                            <h1><span className={`text-lg`}>{formatTime(countdown.minutes)} </span>M </h1>
+                            <h1><span className={`text-lg`}>{formatTime(countdown.seconds)} </span>S</h1>
+                        </div>
                     </div>
-                    <div className="absolute right-0">
-                        <Image src={underline} width={160} alt="" />
-                    </div>
-                </div>
-                <div className="mt-7 relative w-[500px] h-[420px]">
+                </div >
+
+                <div className="mt-7 relative md:w-[900px] md:h-[420px]">
                     <Image src={heroImage} fill alt="" />
                 </div>
-            </div>
-        </div >
+            </div >
+        </div>
     );
 };
 
