@@ -49,19 +49,14 @@ const Herosection = () => {
     return (
         <div className={`  justify-evenly px-2 md:px-24 pt-16 border-b-[1px] border-[#FFFFFF2E] w-full`}>
             <div className="text-center md:relative">
-                <div className="mt-[-2rem] md:absolute md:right-0">
-                    <h2 className={`text-sm md:text-[24px] font-bold`}>Igniting a Revolution in
-                        <span>
-                            HR innovation
-                            <div className="hidden md:flex md:justify-end">
-                                <Image src={underline} width={160} alt="" />
-                            </div>
-                            <div className=" flex justify-end md:hidden ">
-                                <Image src={underline} width={120} alt="" />
-                            </div>
-                        </span>
-
-
+                <div className="mt-[-2rem] w-[200px] md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
+                    <h2 className={`text-base md:text-[24px] font-bold`}>Igniting a Revolution in HR innovation
+                        <div className="hidden md:flex md:justify-end">
+                            <Image src={underline} width={160} alt="" />
+                        </div>
+                        <div className="  flex justify-end absolute right-12 md:hidden ">
+                            <Image src={underline} width={90} alt="" />
+                        </div>
                     </h2>
                 </div>
 
@@ -74,7 +69,7 @@ const Herosection = () => {
                             <Image src={star} width={15} height={15} alt="" />
                         </div>
                         <div className={`mt-5  space-y-5`}>
-                            <div className={`font-extrabold relative text-[45px] ${revalia.className}`}>
+                            <div className={`flex flex-col items-center text-center text-sm md:font-extrabold md:relative md:text-[45px] ${revalia.className}`}>
                                 <h2>getlinked Tech </h2>
                                 <div className="flex space-x-3">
                                     <h2>Hackathon 1.0 </h2>

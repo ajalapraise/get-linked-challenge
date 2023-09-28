@@ -29,13 +29,13 @@ import check from '../../../public/landingPage/check.svg'
 
 export const Intro = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-14 flex justify-evenly items-center`}>
-            <div className='w-1/2'>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
+            <div className='w-full flex items-center justify-center md:w-1/2'>
                 <Image src={introImg} width={450} alt="" />
             </div>
-            <div className='w-[450px] space-y-5 relative'>
-                <h1 className={`text-lg font-extrabold ${revalia.className}`}>Introduction to getlinked <br /> <span className='text-purple5'>tech Hackathon 1.0</span></h1>
-                <p>
+            <div className='w-full flex flex-col items-center justify-center  md:items-start md:w-[450px] space-y-5 relative'>
+                <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-lg font-extrabold ${revalia.className}`}>Introduction to getlinked <br /> <span className='text-purple5'>tech Hackathon 1.0</span></h1>
+                <p className='text-center w-full md:w-full md:text-left'>
                     {`Our tech hackathon is a melting pot of visionaries, and its purpose is as
                     clear as day: to shape the future. Whether you're a coding genius, a
                     design maverick, or a concept wizard, you'll have the chance to transform
@@ -53,11 +53,10 @@ export const Intro = () => {
 
 export const Rules = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-4 flex justify-between space-x-10 items-center`}>
-
-            <div className='w-[600px] space-y-5 relative'>
-                <h1 className={`text-lg font-extrabold ${revalia.className}`}>Rules and <br /> <span className='text-purple5'>Guidelines</span></h1>
-                <p className='w-[420px]'>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col-reverse md:flex-row justify-evenly items-center`}>
+            <div className='w-full flex flex-col items-center justify-center  md:items-start  space-y-5 relative md:w-[600px] '>
+                <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-lg font-extrabold ${revalia.className}`}>Rules and <br /> <span className='text-purple5'>Guidelines</span></h1>
+                <p className='text-center w-full md:w-[420px] md:text-left'>
                     {`Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!`}
                 </p>
                 <div className='absolute top-[-5rem] right-40'>
@@ -66,7 +65,7 @@ export const Rules = () => {
 
 
             </div>
-            <div className='w-[700px]'>
+            <div className='w-full flex items-center justify-center md:w-[700px]'>
                 <Image src={rulesImg} width={650} alt="" />
             </div>
         </div>
@@ -75,19 +74,18 @@ export const Rules = () => {
 
 export const Criteria = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-14 flex justify-between space-x-10 items-center`}>
-            <div className='w-[700px]'>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
+            <div className='w-full flex items-center justify-center md:w-[700px]'>
                 <Image src={criteriaImg} width={650} alt="" />
             </div>
 
-            <div className='w-[600px] space-y-10  py-5 relative'>
+            <div className='w-full flex flex-col items-center justify-center md:items-start md:w-[600px] space-y-10  py-5 relative'>
                 <div className='space-y-7'>
-
-                    <h1 className={`text-lg font-extrabold ${revalia.className}`}>Judging Criteria<br /> <span className='text-purple5'>Key attributes</span></h1>
-                    <ul className='space-y-6'>
+                    <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-lgfont-extrabold ${revalia.className}`}>Judging Criteria<br /> <span className='text-purple5'>Key attributes</span></h1>
+                    <ul className='space-y-3 flex flex-col items-center justify-center text-center md:space-y-6'>
                         <li>
-                            <p className={`text-[14px]`}>
-                                <span className='text-[#FF26B9] text-[16px] font-bold'>Innovation and Creativity: </span> Evaluate the uniqueness and creativity of the
+                            <p className={`text-[13px] md:text-[14px]`}>
+                                <span className='text-[#FF26B9] md:text-[16px] font-bold'>Innovation and Creativity: </span> Evaluate the uniqueness and creativity of the
                                 solution. Consider whether it addresses a real-world problem in a novel
                                 way or introduces innovative features.
                             </p>
@@ -124,7 +122,7 @@ export const Criteria = () => {
                     </ul>
                 </div>
 
-                <div className={`flex  items w-[150px] my-4`}>
+                <div className={`flex  items-center  my-4`}>
                     <Link href="#">
                         <Button btnValue="Read More" />
                     </Link>
@@ -136,13 +134,13 @@ export const Criteria = () => {
 
 export const FAQ = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-4 flex space-x-10 relative`}>
-            <div className={`flex justify-center w-[500px] py-20 flex-col  text-white`}>
-                <div className={`my-2 flex flex-col space-y-7 mb-10   `}>
-                    <h1 className={`text-[27px] font-[100] ${revalia.className}`}>
+        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
+            <div className={`flex justify-center w-[500px] md:py-20 flex-col  text-white`}>
+                <div className={`my-2 flex flex-col items-center space-y-4 mb-5 justify-center  md:items-start md:space-y-7 md:mb-10   `}>
+                    <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-[27px] font-[100] ${revalia.className}`}>
                         Frequently Asked <br /> <span className='text-purple5'>Questions</span>
                     </h1>
-                    <p className={`font-normal text-base w-[370px] `}>
+                    <p className={`text-center w-3/4 font-normal text-base md:w-[370px] `}>
                         We got answers to the questions that you might
                         want to ask about <span className='font-extrabold'>getlinked Hackathon 1.0</span>
                     </p>
@@ -167,8 +165,8 @@ export const FAQ = () => {
 
                 </div>
             </div>
-            <div className=' flex items-center '>
-                <Image src={question} width={750} alt="" />
+            <div className='w-full flex items-center justify-center md:w-[650px] '>
+                <Image src={question} width={650} alt="" />
             </div>
         </div>
     )

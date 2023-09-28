@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({ btnValue, className }) => {
       <input
         type="button"
         value={btnValue}
-        className={` text-base w-[80px] h-[30px] md:text-[16px]  cursor-pointer text-[white] md:w-[120px] md:h-[45px] font-bold hover:bg-purple1 rounded-[5px]  py-1 px-2 text-center justify-center items-center ${className} `}
+        className={` text-base w-[100px] h-[30px] md:text-[16px]  cursor-pointer text-[white] md:w-[120px] md:h-[45px] font-bold hover:bg-purple1 rounded-[5px]  py-1 px-2 text-center justify-center items-center ${className} `}
       />
     </div>
   );
