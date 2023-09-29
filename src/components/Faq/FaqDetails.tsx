@@ -70,7 +70,7 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
 
             </div>
             <div className={`flex  items-center `}>
-                {isOpen && <p className={`my-2 text-[13px] w-[360px] font-normal ${className} flex`}>{answer}</p>}
+                {isOpen && <p className={`my-2 text-[13px] md:w-[360px] font-normal ${className} flex`}>{answer}</p>}
             </div>
 
         </div>

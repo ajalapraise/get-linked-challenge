@@ -155,7 +155,7 @@ export const FAQ = () => {
                         <div className={` flex justify-around flex-col font-normal `}>
                             {FAQData.map((item, id) => (
                                 <div key={id} className={` `}>
-                                    <div className={`border-b-[1px] border-[#D434FE] mb-2 pb-1`}>
+                                    <div className={`border-b-[1px] w-full border-[#D434FE] mb-2 pb-1`}>
                                         <FAQlayout question={item.question} answer={item.answer} id={0} />
                                     </div>
                                 </div>
