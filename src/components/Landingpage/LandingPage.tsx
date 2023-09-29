@@ -457,24 +457,27 @@ export const MdTimeline = () => {
 export const Prizes = () => {
     return (
         <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
-            <div className='w-1/3'>
+            <div className='hidden md:flex md:w-1/3'>
                 <Image src={prize} width={400} alt="" />
             </div>
-            <div className='w-3/5 space-y-10'>
-                <div className={`flex flex-col text-left mx-auto w-[400px]`}>
-                    <h1 className={`${revalia.className}`}>Prizes and <br /> <span className='text-purple5'>Rewards</span></h1>
+            <div className='w-full md:w-3/5 space-y-5'>
+                <div className={`flex flex-col space-y-5 md:space-y-0 text-center md:text-left mx-auto md:w-[400px]`}>
+                    <h1 className={`${revalia.className} text-sm md:text-lg`}>Prizes and <br /> <span className='text-purple5'>Rewards</span></h1>
                     <p>Highlight of the prizes or rewards for winners and for participants.</p>
                 </div>
-                <div className='flex items-center justify-center w-[700px]'>
+                <div className='md:hidden w-full'>
+                    <Image src={prize} width={400} alt="" />
+                </div>
+                <div className='flex items-center justify-center md:w-[700px]'>
                     <div className='flex items-center justify-center'>
-                        <div >
-                            <Image src={silver} width={145} alt="" />
+                        <div className='relative w-[55px] h-[95px] md:w-[145px] md:h-[260px]' >
+                            <Image src={silver} fill alt="" />
+                        </div >
+                        <div className='relative w-[80px] h-[130px] md:w-[220px] md:h-[360px]'>
+                            <Image src={gold} fill alt="" />
                         </div>
-                        <div>
-                            <Image src={gold} width={200} alt="" />
-                        </div>
-                        <div>
-                            <Image src={bronze} width={130} alt="" />
+                        <div className='relative w-[55px] h-[85px] md:w-[145px] md:h-[240px]'>
+                            <Image src={bronze} fill alt="" />
                         </div>
                     </div>
                 </div>
@@ -486,51 +489,64 @@ export const Prizes = () => {
 
 export const Partners = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col items-center space-y-14 relative `}>
+        <div className={`border-b-[1px] p-8 space-y-5 border-[#FFFFFF2E] md:space-y-14 md:px-24 md:py-14 flex flex-col justify-evenly items-center relative`}>
             <div className='flex flex-col text-center space-y-5 items-center'>
-                <h1 className={`text-lg font-extrabold ${revalia.className}`}>Partners and Sponsors</h1>
-                <h5 className='w-[500px] font-normal'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h5>
+                <h1 className={`text-base md:text-lg font-extrabold ${revalia.className}`}>Partners and Sponsors</h1>
+                <h5 className='text-base md:text-sm md:w-[500px] font-normal'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h5>
 
             </div>
-            <div className='border-[1px] border-[#D434FE] flex items-center mx-auto p-20 w-[900px]'>
-                <div className=' flex flex-wrap w-[700px] mx-auto items-center justify-around  p-10'>
-                    <div className='w-1/3 flex justify-center items-center  border-r-[2px] border-[#D434FE] h-[100px] mb-5  '>
-                        <div className='w-2/3 flex justify-center  border-b-[2px] border-[#D434FE] h-[120px] py-2 items-center cursor-pointer '>
-                            <Image src={libertyAssured} width={95} alt="" />
+            <div className='border-[1px] w-3/4 border-[#D434FE] flex flex-col items-center  p-3 md:p-20 md:w-[1000px] space-y-3 md:space-y-8'>
+                <div className=' flex w-3/4 md:w-[800px] mx-auto items-center justify-around '>
+                    <div className='w-1/3 flex justify-center items-center border-r-[2px]  md:border-r-[3px] border-[#D434FE] h-[30px] md:h-[130px] '>
+                        <div className='md:w-[120px] flex justify-center  relative h-[20px] w-[35px] md:h-[120px] items-center cursor-pointer '>
+                            <Image src={libertyAssured} fill alt="" className='' />
                         </div>
 
                     </div>
-                    <div className='w-1/3 flex justify-center items-center  border-r-[2px] border-[#D434FE] h-[100px] mb-5'>
-                        <div className='w-2/3 flex justify-center  border-b-[2px] items-center border-[#D434FE] h-[120px] py-2 cursor-pointer'>
-                            <Image src={libertyPay} width={95} alt="" />
+                    <div className='w-1/3 flex justify-center items-center border-r-[2px] md:border-r-[3px] border-[#D434FE] h-[30px] md:h-[120px] '>
+                        <div className='md:w-[120px] flex justify-center  relative h-[20px] w-[35px] md:h-[120px] items-center cursor-pointer '>
+                            <Image src={libertyPay} fill alt="" className='flex items-center' />
                         </div>
 
                     </div>
-                    <div className='w-1/3 flex justify-center items-center h-[100px]  mb-5'>
-                        <div className='w-2/3 flex justify-center  border-b-[2px] items-center border-[#D434FE] h-[120px] py-2 cursor-pointer'>
-                            <Image src={winwise} width={95} alt="" />
+                    <div className='w-1/3 flex justify-center items-center  h-[30px] md:h-[120px]'>
+                        <div className='md:w-[120px] flex justify-center  relative h-[20px] w-[35px] md:h-[120px] items-center cursor-pointer '>
+                            <Image src={winwise} fill alt="" className='' />
                         </div>
 
                     </div>
-
-                    <div className='w-1/3 flex justify-center items-center border-r-[2px] border-[#D434FE] h-[100px] '>
-                        <div className='w-2/3 flex justify-center h-[120px] py-2 items-center cursor-pointer'>
-                            <Image src={whispersms} width={95} alt="" />
-                        </div>
+                </div>
+                <div className=' flex w-full md:w-[800px] mx-auto items-center justify-around '>
+                    <div className=' md:w-[160px] h-[2px] md:h-[3px] flex items center justify-center bg-[#D434FE]  w-[40px]  '>
 
                     </div>
-                    <div className='w-1/3 flex justify-center items-center border-r-[2px] border-[#D434FE] h-[100px] '>
-                        <div className='w-2/3 flex justify-center items-center  h-[120px] py-2 cursor-pointer'>
-                            <Image src={paybox} width={95} alt="" />
-                        </div>
+                    <div className='md:w-[160px]  h-[2px] md:h-[3px] flex bg-[#D434FE] w-[40px]  items-center '>
 
                     </div>
-                    <div className='w-1/3 flex justify-center items-center  h-[100px]'>
-                        <div className='w-2/3 flex justify-center   items-center  h-[120px] py-2 cursor-pointer'>
-                            <Image src={VizualPlus} alt="" layout="responsive" />
-                        </div>
+
+                    <div className='md:w-[160px]  h-[2px] md:h-[3px] bg-[#D434FE]  w-[40px]  items-center '>
 
                     </div>
+
+                </div>
+                <div className=' flex w-full  md:w-[800px] mx-auto items-center justify-around'>
+                    <div className='w-1/3 flex justify-center items-center border-r-[2px] md:border-r-[3px] border-[#D434FE] h-[30px] md:h-[130px]'>
+                        <div className='md:w-[120px] flex justify-center  relative h-[20px] w-[35px] md:h-[120px]  items-center cursor-pointer '>
+                            <Image src={whispersms} fill alt="" className='' />
+                        </div>
+                    </div>
+
+                    <div className='w-1/3 flex justify-center items-center  border-r-[2px] md:border-r-[3px] border-[#D434FE] h-[30px] md:h-[130px]'>
+                        <div className='md:w-[150px] flex justify-center  relative h-[20px] w-[35px] md:h-[120px]  items-center cursor-pointer '>
+                            <Image src={paybox} fill alt="" className='' />
+                        </div>
+                    </div>
+                    <div className='w-1/3 flex justify-center items-center  h-[30px] md:h-[130px]'>
+                        <div className='md:w-[150px] flex justify-center  relative h-[20px] w-[35px] md:h-[120px]  items-center cursor-pointer '>
+                            <Image src={VizualPlus} fill alt="" className='' />
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
