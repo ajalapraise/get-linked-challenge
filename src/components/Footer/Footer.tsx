@@ -69,7 +69,7 @@ const Footer = () => {
 
         <div>
           <div className={`flex flex-col space-y-2 mt-10 md:mt-0`}>
-            <h3 className={`md:mb-5 font-semibold text-sm text-purple5`}>Useful Links</h3>
+            <h3 className={`md:mb-5 font-semibold text-sm text-purple5`}>Contact Us</h3>
             <div className="space-x-4 flex text-base">
               <h2 className="text-[17px] mt-1 text-[white]"> <BiSolidPhoneCall /> </h2>
               <h1>+234 679 81819</h1>

@@ -30,7 +30,7 @@ import check from '../../../public/landingPage/check.svg'
 export const Intro = () => {
     return (
         <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
-            <div className='w-full flex items-center hidden justify-center md:w-1/2'>
+            <div className='w-full flex items-center justify-center md:w-1/2'>
                 <Image src={introImg} width={450} alt="" />
             </div>
             <div className='w-full flex flex-col items-center justify-center  md:items-start md:w-[450px] space-y-5 relative'>
@@ -59,13 +59,13 @@ export const Rules = () => {
                 <p className='text-center w-full md:w-[420px] md:text-left'>
                     {`Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!`}
                 </p>
-                <div className='absolute top-[-5rem]  right-40'>
+                <div className='absolute top-[-5rem] right-40'>
                     <Image src={ashStarImg} width={22} alt="" />
                 </div>
 
 
             </div>
-            <div className='w-full flex items-center hidden justify-center md:w-[700px]'>
+            <div className='w-full flex items-center justify-center md:w-[700px]'>
                 <Image src={rulesImg} width={650} alt="" />
             </div>
         </div>
@@ -134,7 +134,7 @@ export const Criteria = () => {
 
 export const FAQ = () => {
     return (
-        <div className={`border-b-[1px] hidden p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-24 md:py-14 md:flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-24 md:py-14 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
             <div className={`flex justify-center w-[500px] md:py-20 flex-col  text-white`}>
                 <div className={`my-2 flex flex-col items-center space-y-4 mb-5 justify-center  md:items-start md:space-y-7 md:mb-10   `}>
                     <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-[27px] font-[100] ${revalia.className}`}>
@@ -165,7 +165,7 @@ export const FAQ = () => {
 
                 </div>
             </div>
-            <div className='w-full hidden flex items-center justify-center md:w-[650px] '>
+            <div className='w-full flex items-center justify-center md:w-[650px] '>
                 <Image src={question} width={650} alt="" />
             </div>
         </div>
