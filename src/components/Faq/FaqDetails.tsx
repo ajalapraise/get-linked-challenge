@@ -52,9 +52,9 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
 
 
     return (
-        <div className="min-h-[70px] w-4/5 md:w-full  flex flex-col  justify-center  border-b-[1px]  border-[#D434FE] my-0 ">
-            <div className="flex    justify-between cursor-pointer  ">
-                <div className={`w-4/5 text-[12px] font-[900] md:text-base`}>
+        <div className="min-h-[50px] w-4/5 md:w-full  flex flex-col  justify-center  border-b-[1px]  border-[#D434FE] my-0 ">
+            <div className="flex  justify-between cursor-pointer  ">
+                <div className={`w-4/5 md:w-full text-[10px] font-[900] md:text-base`}>
                     <h3 >
                         {question}
 
@@ -70,7 +70,7 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
 
             </div>
             <div className={`flex  items-center `}>
-                {isOpen && <p className={`my-2 text-[10px] w-4/5 md:text-[13px] md:w-[350px] font-normal ${className} flex`}>{answer}</p>}
+                {isOpen && <p className={`my-1 md:my-2 text-[10px] w-4/5 md:text-[13px] md:w-[350px] font-normal ${className} flex`}>{answer}</p>}
             </div>
 
         </div>
