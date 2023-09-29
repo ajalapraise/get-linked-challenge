@@ -172,138 +172,294 @@ export const FAQ = () => {
     )
 }
 
-export const Timeline = () => {
+export const SmTimeline = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col space-y-10 relative `}>
-            <div className={`mb-10 flex items-center space-y-5 flex-col text-center`}>
-                <h1 className={`text-xl  font-extrabold ${revalia.className}`}>Timeline</h1>
-                <h4 className={`w-[400px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>
+        <div className='md:hidden'>
+            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-5 py-8 flex flex-col space-y-5 relative `}>
+                <div className={`mb-2 flex items-center space-y-5 flex-col text-center`}>
+                    <h1 className={`text-base  font-extrabold ${revalia.className}`}>Timeline</h1>
+                    <h4 className={`w-full text-[10px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>
+                </div>
+                <div className={` flex justify-center w-full items-center`}>
+                    <div className={`flex flex-col   space-y-5`}>
+                        <div className='flex space-x-3 items-center justify-center '>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[60px] w-[3px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[20px] h-[20px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold text-[12px]'>1</h1>
+                                </div>
+
+                            </div>
+                            <div className='flex flex-col space-y-4 '>
+                                <div className={`  flex flex-col  space-y-1 `}>
+                                    <h1 className={`text-[#D434FE]  text-[12px] font-extrabold`}>Hackathon Announcement</h1>
+                                    <h2 className={`text-[8px] font-bold `}>The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</h2>
+                                </div>
+                                <div className={`  flex  `}>
+                                    <h1 className={`text-[#D434FE]  text-[12px] font-extrabold`}>November 18, 2023</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex space-x-3 items-center justify-center'>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[65px] w-[3px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[20px] h-[20px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold text-[12px]'>2</h1>
+                                </div>
+
+                            </div>
+                            <div className='flex flex-col  space-y-5 '>
+                                <div className={`  flex flex-col  space-y-1`}>
+                                    <h1 className={`text-[#D434FE]  text-[12px] font-extrabold`}>Teams Registration begins</h1>
+                                    <h2 className={`text-[8px] font-bold `}>Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</h2>
+                                </div>
+                                <div className={`  flex  `}>
+                                    <h1 className={`text-[#D434FE]  text-[12px] font-extrabold`}>November 18, 2023</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex space-x-3 items-center justify-center'>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>3</h1>
+                                </div>
+
+                            </div>
+                            <div className='flex flex-col '>
+                                <div className={`  flex flex-col space-y-3`}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>Teams Registration ends</h1>
+                                    <h2 className={`text-[10px] font-bold `}>Interested Participants are no longer Allowed to register</h2>
+                                </div>
+                                <div className={`  flex  `}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>November 18, 2023</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex space-x-3 items-center justify-center'>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>4</h1>
+                                </div>
+
+                            </div>
+                            <div className='flex flex-col '>
+                                <div className={`  flex flex-col space-y-3`}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>Announcement of the accepted teams and ideas</h1>
+                                    <h2 className={`text-[10px] font-bold `}>All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announcedr</h2>
+                                </div>
+                                <div className={`  flex  `}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>November 18, 2023</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex space-x-3 items-center justify-center'>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>5</h1>
+                                </div>
+
+                            </div>
+                            <div className='flex flex-col '>
+                                <div className={`  flex flex-col space-y-3`}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>Getlinked Hackathon 1.0 Offically Begins</h1>
+                                    <h2 className={`text-[10px] font-bold `}>Accepted teams can now proceed to build their ground breaking skill solutions</h2>
+                                </div>
+                                <div className={`  flex  `}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>November 18, 2023</h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex space-x-3 items-center justify-center'>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>6</h1>
+                                </div>
+
+                            </div>
+                            <div className='flex flex-col '>
+                                <div className={`  flex flex-col space-y-3`}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>Demo Day</h1>
+                                    <h2 className={`text-[10px] font-bold `}>Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day</h2>
+                                </div>
+                                <div className={`  flex  `}>
+                                    <h1 className={`text-[#D434FE]  text-base font-extrabold`}>November 18, 2023</h1>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div className='absolute top-[200px] left-[300px]'>
+                    <Image src={purpleStarImg} width={20} alt="" />
+                </div>
+                <div className='absolute right-[270px] top-[620px]'>
+                    <Image src={whiteStarImg} width={20} alt="" />
+                </div>
+                <div className='absolute bottom-24 '>
+                    <Image src={ashStarImg} width={20} alt="" />
+                </div>
             </div>
-            <div className={` flex justify-center w-full items-center`}>
-                <div className={`flex flex-col p-5 w-[1200px] space-y-3`}>
-                    <div className='flex items-center  space-x-20'>
-                        <div className={` w-[400px] flex flex-col justify-end items-end mt-24 space-y-3 text-right`}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>Hackathon Announcement</h1>
-                            <h2 className={`text-[12px] font-bold `}>The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</h2>
-                        </div>
-                        <div className='flex flex-col items-center space-y-3'>
-                            <div className='h-[110px] w-[4px] bg-[#D434FE]'>
+        </div>
+    )
+}
+
+export const MdTimeline = () => {
+    return (
+        <div className='hidden md:flex w-full'>
+            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col w-full  space-y-10 relative `}>
+                <div className={`mb-10 flex items-center space-y-5 flex-col text-center`}>
+                    <h1 className={`text-xl  font-extrabold ${revalia.className}`}>Timeline</h1>
+                    <h4 className={`w-[400px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>
+                </div>
+                <div className={` flex justify-center w-full items-center`}>
+                    <div className={`flex flex-col justify-center items-center p-5 w-full space-y-3`}>
+                        <div className='flex items-center  space-x-20'>
+                            <div className={` w-[400px] flex flex-col justify-end items-end mt-24 space-y-3 text-right`}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>Hackathon Announcement</h1>
+                                <h2 className={`text-[12px] font-bold `}>The getlinked tech hackathon 1.0 is formally announced to the general public and teams begin to get ready to register</h2>
+                            </div>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[110px] w-[4px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>1</h1>
+                                </div>
 
                             </div>
-                            <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
-                                <h1 className='font-extrabold'>1</h1>
+                            <div className={` w-[400px] flex justify-start items-end mt-[120px] text-left `}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>November 18, 2023</h1>
                             </div>
-
                         </div>
-                        <div className={` w-[400px] flex justify-start items-end mt-[120px] text-left `}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>November 18, 2023</h1>
-                        </div>
-                    </div>
 
-                    <div className='flex items-center space-x-20'>
-                        <div className={`w-[400px] mt-[80px] flex justify-end items-end text-right `}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold `}>November 18, 2023</h1>
-                        </div>
-                        <div className='flex flex-col items-center space-y-3'>
-                            <div className='h-[70px] w-[4px] bg-[#D434FE]'>
-
+                        <div className='flex items-center space-x-20'>
+                            <div className={`w-[400px] mt-[80px] flex justify-end items-end text-right `}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold `}>November 18, 2023</h1>
                             </div>
-                            <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
-                                <h1 className='font-extrabold'>2</h1>
-                            </div>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
 
-                        </div>
-                        <div className={` w-[400px] flex flex-col justify-center  space-y-3 mt-16 text-left`}>
-                            <h1 className={`text-[#D434FE] text-[20px] font-extrabold`}>Teams Registration begins</h1>
-                            <h2 className={`text-[12px]  font-bold `}>Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</h2>
-                        </div>
-                    </div>
-
-                    <div className='flex  items-center space-x-20'>
-                        <div className={` w-[400px] flex mt-14 flex-col justify-end items-end  space-y-3 text-right`}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>Teams Registration ends</h1>
-                            <h2 className={`text-[12px] font-bold`}>Interested Participants are no longer Allowed to <br /> register</h2>
-                        </div>
-                        <div className='flex flex-col items-center space-y-3'>
-                            <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>2</h1>
+                                </div>
 
                             </div>
-                            <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
-                                <h1 className='font-extrabold'>3</h1>
+                            <div className={` w-[400px] flex flex-col justify-center  space-y-3 mt-16 text-left`}>
+                                <h1 className={`text-[#D434FE] text-[20px] font-extrabold`}>Teams Registration begins</h1>
+                                <h2 className={`text-[12px]  font-bold `}>Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023 by proceeding to register</h2>
                             </div>
-
                         </div>
-                        <div className={` w-[400px] flex mt-20  text-left `}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>November 18, 2023</h1>
-                        </div>
-                    </div>
 
-                    <div className='flex  items-center space-x-20'>
-                        <div className={`w-[400px] mt-3 flex justify-end items-end  h-[100px] text-right `}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold `}>November 18, 2023</h1>
-                        </div>
-                        <div className='flex flex-col items-center space-y-3'>
-                            <div className='h-[70px] w-[4px] bg-[#D434FE]'>
-
+                        <div className='flex  items-center space-x-20'>
+                            <div className={` w-[400px] flex mt-14 flex-col justify-end items-end  space-y-3 text-right`}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>Teams Registration ends</h1>
+                                <h2 className={`text-[12px] font-bold`}>Interested Participants are no longer Allowed to <br /> register</h2>
                             </div>
-                            <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
-                                <h1 className='font-extrabold'>4</h1>
-                            </div>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
 
-                        </div>
-                        <div className={` w-[400px] flex mt-10 flex-col justify-center  h-[100px] space-y-3 text-left`}>
-                            <h1 className={`text-[#D434FE] text-[20px] font-extrabold`}>Announcement of the accepted teams and ideas</h1>
-                            <h2 className={`text-[12px] font-bold`}>All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced</h2>
-                        </div>
-                    </div>
-
-                    <div className='flex  items-center space-x-20'>
-                        <div className={` w-[400px] mt-10 flex flex-col justify-end items-end  h-[100px] space-y-3 text-right`}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>Getlinked Hackathon 1.0 Offically Begins</h1>
-                            <h2 className={`text-[12px] font-bold `}>Accepted teams can now proceed to build their ground breaking skill driven solutions</h2>
-                        </div>
-                        <div className='flex flex-col items-center space-y-3'>
-                            <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>3</h1>
+                                </div>
 
                             </div>
-                            <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
-                                <h1 className='font-extrabold'>5</h1>
+                            <div className={` w-[400px] flex mt-20  text-left `}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>November 18, 2023</h1>
                             </div>
+                        </div>
 
-                        </div>
-                        <div className={` w-[400px] mt-3 flex justify-start items-end h-[100px] text-left `}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>November 18, 2023</h1>
-                        </div>
-                    </div>
+                        <div className='flex  items-center space-x-20'>
+                            <div className={`w-[400px] mt-3 flex justify-end items-end  h-[100px] text-right `}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold `}>November 18, 2023</h1>
+                            </div>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
 
-                    <div className='flex  items-center space-x-20'>
-                        <div className={`w-[400px] mt-3 flex justify-end items-end  h-[100px] text-right `}>
-                            <h1 className={`text-[#D434FE]  text-[20px] font-extrabold `}>November 18, 2023</h1>
-                        </div>
-                        <div className='flex flex-col items-center space-y-3'>
-                            <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>4</h1>
+                                </div>
 
                             </div>
-                            <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
-                                <h1 className='font-extrabold'>6</h1>
+                            <div className={` w-[400px] flex mt-10 flex-col justify-center  h-[100px] space-y-3 text-left`}>
+                                <h1 className={`text-[#D434FE] text-[20px] font-extrabold`}>Announcement of the accepted teams and ideas</h1>
+                                <h2 className={`text-[12px] font-bold`}>All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are formally announced</h2>
                             </div>
-
                         </div>
-                        <div className={` w-[400px] mt-[55px] flex flex-col justify-center  h-[100px] space-y-3 text-left`}>
-                            <h1 className={`text-[#D434FE] text-[20px] font-extrabold`}>Demo Day</h1>
-                            <h2 className={`text-[12px] font-bold `}>Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day</h2>
+
+                        <div className='flex  items-center space-x-20'>
+                            <div className={` w-[400px] mt-10 flex flex-col justify-end items-end  h-[100px] space-y-3 text-right`}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>Getlinked Hackathon 1.0 Offically Begins</h1>
+                                <h2 className={`text-[12px] font-bold `}>Accepted teams can now proceed to build their ground breaking skill driven solutions</h2>
+                            </div>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>5</h1>
+                                </div>
+
+                            </div>
+                            <div className={` w-[400px] mt-3 flex justify-start items-end h-[100px] text-left `}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold`}>November 18, 2023</h1>
+                            </div>
+                        </div>
+
+                        <div className='flex  items-center space-x-20'>
+                            <div className={`w-[400px] mt-3 flex justify-end items-end  h-[100px] text-right `}>
+                                <h1 className={`text-[#D434FE]  text-[20px] font-extrabold `}>November 18, 2023</h1>
+                            </div>
+                            <div className='flex flex-col items-center space-y-3'>
+                                <div className='h-[70px] w-[4px] bg-[#D434FE]'>
+
+                                </div>
+                                <div className={`w-[35px] h-[35px] rounded-full bg-[#D434FE] flex justify-center items-center`}>
+                                    <h1 className='font-extrabold'>6</h1>
+                                </div>
+
+                            </div>
+                            <div className={` w-[400px] mt-[55px] flex flex-col justify-center  h-[100px] space-y-3 text-left`}>
+                                <h1 className={`text-[#D434FE] text-[20px] font-extrabold`}>Demo Day</h1>
+                                <h2 className={`text-[12px] font-bold `}>Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='absolute top-[200px] left-[300px]'>
-                <Image src={purpleStarImg} width={20} alt="" />
-            </div>
-            <div className='absolute right-[270px] top-[620px]'>
-                <Image src={whiteStarImg} width={20} alt="" />
-            </div>
-            <div className='absolute bottom-24 '>
-                <Image src={ashStarImg} width={20} alt="" />
+                <div className='absolute top-[200px] left-[300px]'>
+                    <Image src={purpleStarImg} width={20} alt="" />
+                </div>
+                <div className='absolute right-[270px] top-[620px]'>
+                    <Image src={whiteStarImg} width={20} alt="" />
+                </div>
+                <div className='absolute bottom-24 '>
+                    <Image src={ashStarImg} width={20} alt="" />
+                </div>
             </div>
         </div>
     )
