@@ -47,7 +47,7 @@ const Herosection = () => {
     };
 
     return (
-        <div className={`  justify-evenly px-2 md:px-24 pt-16 border-b-[1px] border-[#FFFFFF2E] w-full`}>
+        <div className={`hidden  justify-evenly px-2 md:px-24 pt-16 border-b-[1px] border-[#FFFFFF2E] w-full`}>
             <div className="text-center md:relative">
                 <div className="mt-[-2rem] w-[200px] md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
                     <h2 className={`text-base md:text-[24px] font-bold`}>Igniting a Revolution in HR innovation

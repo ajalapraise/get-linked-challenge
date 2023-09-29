@@ -75,14 +75,14 @@ export const Rules = () => {
 export const Criteria = () => {
     return (
         <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
-            <div className='w-full flex items-center justify-center md:w-[700px]'>
-                <Image src={criteriaImg} width={650} alt="" />
+            <div className='w-full flex items-center relative justify-center md:w-[550px] h-[250px] md:h-[550px]'>
+                <Image src={criteriaImg} fill alt="" />
             </div>
 
             <div className='w-full flex flex-col items-center justify-center md:items-start md:w-[600px] space-y-10  py-5 relative'>
                 <div className='space-y-7'>
                     <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-lgfont-extrabold ${revalia.className}`}>Judging Criteria<br /> <span className='text-purple5'>Key attributes</span></h1>
-                    <ul className='space-y-3 flex flex-col items-center justify-center text-center md:space-y-6'>
+                    <ul className='space-y-3 flex flex-col items-center justify-center text-center md:text-left md:space-y-6'>
                         <li>
                             <p className={`text-[13px] md:text-[14px]`}>
                                 <span className='text-[#FF26B9] md:text-[16px] font-bold'>Innovation and Creativity: </span> Evaluate the uniqueness and creativity of the
@@ -496,7 +496,7 @@ export const Partners = () => {
 
             </div>
             <div className='border-[1px] w-3/4 border-[#D434FE] flex flex-col items-center  p-3 md:p-20 md:w-[1000px] space-y-3 md:space-y-8'>
-                <div className=' flex w-3/4 md:w-[800px] mx-auto items-center justify-around '>
+                <div className=' flex w-full md:w-[800px] mx-auto items-center justify-around '>
                     <div className='w-1/3 flex justify-center items-center border-r-[2px]  md:border-r-[3px] border-[#D434FE] h-[30px] md:h-[130px] '>
                         <div className='md:w-[120px] flex justify-center  relative h-[20px] w-[35px] md:h-[120px] items-center cursor-pointer '>
                             <Image src={libertyAssured} fill alt="" className='' />
@@ -555,32 +555,36 @@ export const Partners = () => {
 
 export const Privacy = () => {
     return (
-        <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex  items-center space-x-3 relative `}>
-            <div className='space-y-14'>
-                <div className='space-y-5'>
-                    <h1 className={`${revalia.className} text-lg`}>
+        <div className={`border-b-[1px] p-5 space-y-8 border-[#FFFFFF2E] md:space-x-5 md:px-24 md:py-14 flex flex-col md:flex-row justify-center items-center relative`}>
+            <div className='md:space-y-14 space-y-8 w-5/6 md:w-[550px]   '>
+                <div className='flex flex-col w-full  text-center md:text-left space-y-5 items-center md:items-start'>
+                    <h1 className={`${revalia.className} text-base md:text-lg`}>
                         Privacy Policy and <br /><span className='text-purple5'>Terms</span>
                     </h1>
-                    <h6 className='text-base'>Last updated on September 12, 2023</h6>
-                    <h4 className='font-extrabold text-base'>Below are our privacy & policy, which outline a lot of goodies. <br />it’s our aim to always take of our participant</h4>
+                    <h6 className='text-base w-4/5 md:w-full'>Last updated on September 12, 2023</h6>
+                    <h4 className='font-extrabold text-[10px] w-4/5   md:w-full md:text-base'>Below are our privacy & policy, which outline a lot of goodies. <br />it’s our aim to always take of our participant</h4>
                 </div>
 
-                <div className={`w-[550px] p-14 flex flex-col items-center space-y-6 border-[1px] rounded-md border-[#D434FE]`}>
+                <div className={`w-full md:w-[500px] p-5 md:p-14 flex flex-col items-center  space-y-5 md:space-y-6 border-[1px] rounded-md border-[#D434FE]`}>
                     <div className=''>
-                        <p className='font-semibold leading-8 text-[16px['>At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy.</p>
-                        <h2 className='mt-7 mb-1 text-purple5 font-extrabold text-sm'>Licensing Policy</h2>
-                        <h3>Here are terms of our Standard License:</h3>
+                        <p className='font-semibold text-center md:text-left leading-6 md:leading-8 text-[12px] md:text-[16px]'>At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy.</p>
+                        <h2 className='mt-4  md:mt-7 mb-1 text-purple5 font-extrabold text-base md:text-sm'>Licensing Policy</h2>
+                        <h3 className='text-[12px] md:text-sm'>Here are terms of our Standard License:</h3>
                     </div>
                     <div className='flex space-x-3 items-start'>
-                        <Image src={check} width={20} alt="" className='mt-1' />
-                        <h3>The Standard License grants you a non-exclusive right to navigate and register for our event</h3>
+                        <div className='relative w-[30px] h-[30px]'>
+                            <Image src={check} fill alt="" className='' />
+                        </div>
+                        <h3 className='mt-[3px] text-[12px] md:text-[16px]'>The Standard License grants you a non-exclusive right to navigate and register for our event</h3>
                     </div>
-                    <div className='flex space-x-5  items-start'>
-                        <Image src={check} width={20} alt="" className='mt-1' />
-                        <h3>You are licensed to use the item available at any free source sites, for your project developement</h3>
+                    <div className='flex space-x-3  items-start'>
+                        <div className='relative w-[30px] h-[30px]'>
+                            <Image src={check} fill alt="" className='' />
+                        </div>
+                        <h3 className='mt-[3px] text-[12px] md:text-[16px]'>You are licensed to use the item available at any free source sites, for your project developement</h3>
                     </div>
 
-                    <div className={`flex items-center w-[150px]`}>
+                    <div className={`flex  items-center  my-4`}>
                         <Link href="#">
                             <Button btnValue="Read more" />
                         </Link>
@@ -588,7 +592,7 @@ export const Privacy = () => {
                 </div>
 
             </div>
-            <div className=" relative w-[600px] h-[750px]">
+            <div className=" relative md:w-[600px] h-[280px] md:h-[750px] w-5/6 flex items-center  justify-center mx-auto">
                 <Image src={privacy} fill alt="" />
             </div>
         </div>
