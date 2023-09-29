@@ -592,7 +592,7 @@ export const Privacy = () => {
                 </div>
 
             </div>
-            <div className=" relative md:w-[600px] h-[300px] md:h-[750px] w-11/12 flex items-center  justify-center mx-auto">
+            <div className=" relative md:w-[600px] h-[500px] md:h-[750px] w-11/12 flex items-center  justify-center mx-auto">
                 <Image src={privacy} fill alt="" />
             </div>
         </div>
