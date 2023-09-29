@@ -134,13 +134,13 @@ export const Criteria = () => {
 
 export const FAQ = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-24 md:py-14 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
             <div className={`flex justify-center w-[500px] md:py-20 flex-col  text-white`}>
                 <div className={`my-2 flex flex-col items-center space-y-4 mb-5 justify-center  md:items-start md:space-y-7 md:mb-10   `}>
                     <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-[27px] font-[100] ${revalia.className}`}>
                         Frequently Asked <br /> <span className='text-purple5'>Questions</span>
                     </h1>
-                    <p className={`text-center w-3/4 font-normal text-base md:w-[370px] `}>
+                    <p className={`text-center md:text-left px-10 md:px-0 w-3/5 font-normal text-[12px] md:text-base md:w-[370px] `}>
                         We got answers to the questions that you might
                         want to ask about <span className='font-extrabold'>getlinked Hackathon 1.0</span>
                     </p>
@@ -150,12 +150,12 @@ export const FAQ = () => {
                 </div>
 
 
-                <div className={`flex  flex-col  justify-center`}>
+                <div className={`flex w-4/5 md:w-full px-10 md:px-0  flex-col mx-auto justify-center`}>
                     <div className={`flex  flex-col  justify-center`}>
                         <div className={` flex justify-around flex-col font-normal `}>
                             {FAQData.map((item, id) => (
-                                <div key={id} className={` `}>
-                                    <div className={`border-b-[1px] w-full border-[#D434FE] mb-2 pb-1`}>
+                                <div key={id} className={`flex justify-center items-center w-full px-5 md:px-0 `}>
+                                    <div className={`flex  w-full justify-center  mb-2 pb-1`}>
                                         <FAQlayout question={item.question} answer={item.answer} id={0} />
                                     </div>
                                 </div>

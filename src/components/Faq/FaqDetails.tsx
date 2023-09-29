@@ -52,9 +52,9 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
 
 
     return (
-        <div className=" min-h-[70px] flex flex-col  justify-center  my-0 ">
-            <div className="flex  items-center  justify-between cursor-pointer  ">
-                <div className={` font-[900] text-base`}>
+        <div className="min-h-[70px] w-4/5 md:w-full  flex flex-col  justify-center  border-b-[1px]  border-[#D434FE] my-0 ">
+            <div className="flex    justify-between cursor-pointer  ">
+                <div className={`w-4/5 text-[12px] font-[900] md:text-base`}>
                     <h3 >
                         {question}
 
@@ -62,7 +62,7 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
                 </div>
 
                 <div
-                    className={`transition-transform transform text-lg bg-black text-[#D434FE] rounded-2xl hover:text-[white]  ${isOpen ? 'rotate-0 justify-end' : '-rotate-0'}`}
+                    className={`transition-transform transform text-base md:text-[20px] bg-black text-[#D434FE] rounded-2xl w-1/5 flex justify-end hover:text-[white]  ${isOpen ? 'rotate-0 justify-end' : '-rotate-0'}`}
                     onClick={toggleOpen}
                 >
                     {isOpen ? <><AiOutlineMinus /></> : <><AiOutlinePlus /></>}
@@ -70,7 +70,7 @@ export const FAQlayout: React.FC<FAQProps> = ({ question, answer, className }) =
 
             </div>
             <div className={`flex  items-center `}>
-                {isOpen && <p className={`my-2 text-[13px] md:w-[360px] font-normal ${className} flex`}>{answer}</p>}
+                {isOpen && <p className={`my-2 text-[10px] w-4/5 md:text-[13px] md:w-[350px] font-normal ${className} flex`}>{answer}</p>}
             </div>
 
         </div>
