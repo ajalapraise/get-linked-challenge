@@ -90,7 +90,7 @@ const Herosection = () => {
                     </div>
                 </div >
 
-                <div className="mt-12  w-3/4 h-[250px] relative md:w-[900px] md:h-[445px]">
+                <div className="mt-12  w-3/4 h-[250px] relative md:w-[900px] md:h-[440px]">
                     <Image src={heroImage} fill alt="" />
                 </div>
             </div >
