@@ -29,8 +29,8 @@ import check from '../../../public/landingPage/check.svg'
 
 export const Intro = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
-            <div className='w-full flex items-center justify-center md:w-1/2'>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
+            <div className='w-full flex items-start justify-start md:w-1/2'>
                 <Image src={introImg} width={450} alt="" />
             </div>
             <div className='w-full flex flex-col items-center justify-center  md:items-start md:w-[450px] space-y-5 relative'>
