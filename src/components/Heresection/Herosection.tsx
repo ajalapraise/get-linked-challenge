@@ -21,7 +21,7 @@ const Herosection = () => {
     });
 
     useEffect(() => {
-        const targetDate = new Date("2023-09-23T23:59:59");
+        const targetDate = new Date("2023-12-31T23:59:59");
 
         const updateCountdown = () => {
             const now = new Date();
@@ -47,10 +47,10 @@ const Herosection = () => {
     };
 
     return (
-        <div className={`  justify-evenly px-2 md:px-24 pt-16 border-b-[1px] border-[#FFFFFF2E] w-full`}>
+        <div className={`  justify-evenly px-2 md:px-16 py-3 border-b-[1px] border-[#FFFFFF2E] w-full`}>
             <div className="text-center md:relative">
                 <div className="mt-[-2rem] w-[200px] md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
-                    <h2 className={`text-base md:text-[24px] font-bold`}>Igniting a Revolution in HR innovation
+                    <h2 className={`text-base mt-8 md:text-[24px] font-bold`}>Igniting a Revolution in HR innovation
                         <div className="hidden md:flex md:justify-end">
                             <Image src={underline} width={160} alt="" />
                         </div>
@@ -98,7 +98,7 @@ const Herosection = () => {
                     </div>
                 </div >
 
-                <div className="mt-7 relative md:w-[900px] md:h-[420px]">
+                <div className="mt-9 relative md:w-[900px] md:h-[420px]">
                     <Image src={heroImage} fill alt="" />
                 </div>
             </div >

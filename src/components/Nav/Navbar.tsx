@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-purple3 border-b-[1px] border-[#FFFFFF2E] w-full font-extrabold text-[white] p-1">
-      <div className="flex  items-center justify-between px-10 min-h-[100px] md:px-20 relative ">
+      <div className="flex  items-center justify-between px-10 min-h-[80px] md:px-20 relative ">
         <div className="w-2/5 flex justify-left items-center `">
           <Link href="/" className={`flex items-center ${revalia.className}`}>
             <h4 className="text-base md:text-lg font-extrabold ">

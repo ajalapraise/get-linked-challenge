@@ -29,7 +29,7 @@ import check from '../../../public/landingPage/check.svg'
 
 export const Intro = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
             <div className='w-full flex items-center justify-center md:w-1/2'>
                 <Image src={introImg} width={450} alt="" />
             </div>
@@ -53,7 +53,7 @@ export const Intro = () => {
 
 export const Rules = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col-reverse md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-8 flex flex-col-reverse md:flex-row justify-evenly items-center`}>
             <div className='w-full flex flex-col items-center justify-center  md:items-start  space-y-5 relative md:w-[600px] '>
                 <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-lg font-extrabold ${revalia.className}`}>Rules and <br /> <span className='text-purple5'>Guidelines</span></h1>
                 <p className='text-center w-full md:w-[420px] md:text-left'>
@@ -74,7 +74,7 @@ export const Rules = () => {
 
 export const Criteria = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-a6 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
             <div className='w-full flex items-center relative justify-center md:w-[550px] h-[250px] md:h-[550px]'>
                 <Image src={criteriaImg} fill alt="" />
             </div>
@@ -134,7 +134,7 @@ export const Criteria = () => {
 
 export const FAQ = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-24 md:py-14 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-16 md:py-10 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
             <div className={`flex justify-center w-[500px] md:py-20 flex-col  text-white`}>
                 <div className={`my-2 flex flex-col items-center space-y-4 mb-5 justify-center  md:items-start md:space-y-7 md:mb-10   `}>
                     <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-[27px] font-[100] ${revalia.className}`}>
@@ -318,7 +318,7 @@ export const SmTimeline = () => {
 export const MdTimeline = () => {
     return (
         <div className='hidden md:flex w-full'>
-            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-24 py-16 flex flex-col w-full  space-y-10 relative `}>
+            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-16 py-10 flex flex-col w-full  space-y-10 relative `}>
                 <div className={`mb-10 flex items-center space-y-5 flex-col text-center`}>
                     <h1 className={`text-xl  font-extrabold ${revalia.className}`}>Timeline</h1>
                     <h4 className={`w-[400px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>
@@ -456,7 +456,7 @@ export const MdTimeline = () => {
 
 export const Prizes = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-24 md:py-14 flex flex-col md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
             <div className='hidden md:flex md:w-1/3'>
                 <Image src={prize} width={400} alt="" />
             </div>
@@ -489,7 +489,7 @@ export const Prizes = () => {
 
 export const Partners = () => {
     return (
-        <div className={`border-b-[1px] p-8 space-y-5 border-[#FFFFFF2E] md:space-y-14 md:px-24 md:py-14 flex flex-col justify-evenly items-center relative`}>
+        <div className={`border-b-[1px] p-8 space-y-5 border-[#FFFFFF2E] md:space-y-14 md:px-16 md:py-14 flex flex-col justify-evenly items-center relative`}>
             <div className='flex flex-col text-center space-y-5 items-center'>
                 <h1 className={`text-base md:text-lg font-extrabold ${revalia.className}`}>Partners and Sponsors</h1>
                 <h5 className='text-base md:text-sm md:w-[500px] font-normal'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h5>
@@ -555,7 +555,7 @@ export const Partners = () => {
 
 export const Privacy = () => {
     return (
-        <div className={`border-b-[1px] p-5 space-y-8 border-[#FFFFFF2E] md:space-x-5 md:px-24 md:py-14 flex flex-col md:flex-row justify-center items-center relative`}>
+        <div className={`border-b-[1px] p-5 space-y-8 border-[#FFFFFF2E] md:space-x-5 md:px-16 md:py-14 flex flex-col md:flex-row justify-center items-center md:items-start relative`}>
             <div className='md:space-y-14 space-y-8 w-5/6 md:w-[550px]   '>
                 <div className='flex flex-col w-full  text-center md:text-left space-y-5 items-center md:items-start'>
                     <h1 className={`${revalia.className} text-base md:text-lg`}>
@@ -565,10 +565,10 @@ export const Privacy = () => {
                     <h4 className='font-extrabold text-[10px] w-4/5   md:w-full md:text-base'>Below are our privacy & policy, which outline a lot of goodies. <br />it’s our aim to always take of our participant</h4>
                 </div>
 
-                <div className={`w-full md:w-[500px] p-5 md:p-14 flex flex-col items-center  space-y-5 md:space-y-6 border-[1px] rounded-md border-[#D434FE]`}>
+                <div className={`w-full md:w-[450px] p-5 md:p-10 flex flex-col items-center  space-y-5 md:space-y-2 border-[1px] rounded-md border-[#D434FE]`}>
                     <div className=''>
-                        <p className='font-semibold text-center md:text-left leading-6 md:leading-8 text-[12px] md:text-[16px]'>At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy.</p>
-                        <h2 className='mt-4  md:mt-7 mb-1 text-purple5 font-extrabold text-base md:text-sm'>Licensing Policy</h2>
+                        <p className='font-semibold text-center md:text-left leading-6 md:leading-7 text-[12px] md:text-[16px]'>At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy.</p>
+                        <h2 className='mt-4  md:mt-5 mb-1 text-purple5 font-extrabold text-base md:text-sm'>Licensing Policy</h2>
                         <h3 className='text-[12px] md:text-sm'>Here are terms of our Standard License:</h3>
                     </div>
                     <div className='flex space-x-3 items-start'>
