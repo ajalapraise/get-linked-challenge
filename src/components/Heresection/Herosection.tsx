@@ -94,9 +94,9 @@ const Herosection = () => {
                     <Image src={heroImage} fill alt="" />
                 </div>
             </div >
-            <div className=" absolute ml-10">
+            {/* <div className=" absolute ml-10">
                 <Image src={star} width={15} height={15} alt="" />
-            </div>
+            </div> */}
         </div>
     );
 };
