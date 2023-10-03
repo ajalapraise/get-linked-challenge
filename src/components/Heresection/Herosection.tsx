@@ -47,29 +47,29 @@ const Herosection = () => {
     };
 
     return (
-        <div className={`  justify-evenly relative items-center px-2 md:px-16 pt-6 md:pt-3 border-b-[1px] border-[#FFFFFF2E] w-full`}>
+        <div className={`  justify-evenly relative items-center px-2 md:px-20 pt-6 md:pt-3 border-b-[1px] border-[#FFFFFF2E] w-full`}>
             <div className="flex items-center justify-center md:relative">
                 <div className="mt-[-3.5rem] mb-8 md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
-                    <h2 className={`text-base  mt-14 md:mt-32 text-center sm:text-[22px] font-bold relative`}>Igniting a Revolution in HR innovation
-                        <div className=" absolute md:flex   right-0 w-[90px] h-[7px] sm:w-[145px] md:h-[9px]">
+                    <h2 className={`text-base  mt-14 md:mt-32 text-center sm:text-[30px] font-bold relative`}>Igniting a Revolution in HR innovation
+                        <div className=" absolute md:flex   right-0 w-[90px] h-[7px] sm:w-[200px] md:h-[10px]">
                             <Image src={underline} fill alt="" />
                         </div>
 
                     </h2>
                 </div>
             </div>
-            <div className={`w-full flex flex-col items-center md:flex-row`}>
-                <div className={`w-full md:w-full space-y-7  flex justify-center flex-col`}>
+            <div className={`w-full flex flex-col items-center  md:flex-row`}>
+                <div className={`w-full  space-y-7  flex justify-center flex-col`}>
                     <div className={` space-y-3 md:space-y-0`}>
-                        <div className={`flex flex-col items-center text-center md:items-start text-[24px] md:font-extrabold md:relative md:text-[40px] ${revalia.className}`}>
-                            <div className="relative">
-                                <h2 className="">getlinked Tech </h2>
-                                <div className="absolute w-[25px] h-[25px] top-[-1rem] right-[0.5rem] md:w-[45px] md:h-[50px] md:right-4 md:top-[-2rem]">
+                        <div className={`flex flex-col items-center text-center md:items-start text-[24px] md:font-extrabold md:relative md:text-[50px] ${revalia.className}`}>
+                            <div className="relative ">
+                                <h2 className="tracking-wider">getlinked Tech </h2>
+                                <div className="absolute w-[25px] h-[25px] top-[-1rem] right-[0.5rem] md:w-[45px] md:h-[50px] md:right-8 md:top-[-1.5rem]">
                                     <Image src={bulb} fill alt="" />
                                 </div>
                             </div>
                             <div className="flex ">
-                                <h2>Hackathon 1.0 </h2>
+                                <h2 className="tracking-wider">Hackathon 1.0 </h2>
                                 <div className="relative w-[35px] h-[25px] mt-1 md:w-[40px] md:h-[50px] md:mt-2 ml-2 ">
                                     <Image src={linkage} fill alt="" />
                                 </div>
@@ -95,7 +95,7 @@ const Herosection = () => {
                 </div >
 
                 <div className="w-3/4 flex justify-center">
-                    <div className="mt-12 w-full h-[250px]  sm:w-[400px] sm:h-[350px] relative md:w-[400px] md:h-[420px]">
+                    <div className="mt-14 w-full h-[250px]  sm:w-[400px] sm:h-[350px] relative md:w-[500px] md:h-[450px]">
                         <Image src={heroImage} fill alt="" />
                     </div>
                 </div>

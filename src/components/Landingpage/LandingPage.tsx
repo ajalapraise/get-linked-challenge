@@ -29,7 +29,7 @@ import check from '../../../public/landingPage/check.svg'
 
 export const Intro = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-14 flex flex-col md:flex-row justify-around items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-around items-center`}>
             <div className='w-full flex justify-center items-center md:items-start md:justify-start md:w-1/2'>
                 <Image src={introImg} width={450} alt="" />
             </div>
@@ -53,7 +53,7 @@ export const Intro = () => {
 
 export const Rules = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-8 flex flex-col-reverse md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-8 flex flex-col-reverse md:flex-row justify-evenly items-center`}>
             <div className='w-full flex flex-col items-center justify-center  md:items-start  space-y-5 relative md:w-[600px] '>
                 <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-lg font-extrabold ${revalia.className}`}>Rules and <br /> <span className='text-purple5'>Guidelines</span></h1>
                 <p className='text-center w-full md:w-[420px] md:text-left'>
@@ -74,7 +74,7 @@ export const Rules = () => {
 
 export const Criteria = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-a6 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
             <div className='w-full flex items-center relative justify-center sm:w-[350px] md:w-[550px] h-[300px] sm:h-[300px] md:h-[550px]'>
                 <Image src={criteriaImg} fill alt="" />
             </div>
@@ -134,7 +134,7 @@ export const Criteria = () => {
 
 export const FAQ = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-16 md:py-10 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-20 md:py-10 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
             <div className={`flex justify-center w-[500px] md:py-20 flex-col  text-white`}>
                 <div className={`my-2 flex flex-col items-center space-y-4 mb-5 justify-center  md:items-start md:space-y-7 md:mb-10   `}>
                     <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-[27px] font-[100] ${revalia.className}`}>
@@ -318,7 +318,7 @@ export const SmTimeline = () => {
 export const MdTimeline = () => {
     return (
         <div className='hidden md:flex w-full'>
-            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-16 py-10 flex flex-col w-full  space-y-10 relative `}>
+            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-20 py-10 flex flex-col w-full  space-y-10 relative `}>
                 <div className={`mb-10 flex items-center space-y-5 flex-col text-center`}>
                     <h1 className={`text-xl  font-extrabold ${revalia.className}`}>Timeline</h1>
                     <h4 className={`w-[400px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>
@@ -456,7 +456,7 @@ export const MdTimeline = () => {
 
 export const Prizes = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
             <div className='hidden md:flex md:w-1/3'>
                 <Image src={prize} width={400} alt="" />
             </div>
@@ -489,7 +489,7 @@ export const Prizes = () => {
 
 export const Partners = () => {
     return (
-        <div className={`border-b-[1px] p-8 space-y-5 border-[#FFFFFF2E] md:space-y-14 md:px-16 md:py-14 flex flex-col justify-evenly items-center relative`}>
+        <div className={`border-b-[1px] p-8 space-y-5 border-[#FFFFFF2E] md:space-y-14 md:px-20 md:py-14 flex flex-col justify-evenly items-center relative`}>
             <div className='flex flex-col text-center space-y-5 items-center'>
                 <h1 className={`text-base md:text-lg font-extrabold ${revalia.className}`}>Partners and Sponsors</h1>
                 <h5 className='text-base md:text-sm md:w-[500px] font-normal'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</h5>
@@ -555,7 +555,7 @@ export const Partners = () => {
 
 export const Privacy = () => {
     return (
-        <div className={`border-b-[1px] p-5 space-y-8 border-[#FFFFFF2E] md:space-x-5 md:px-16 md:py-14 flex flex-col md:flex-row justify-center items-center md:items-start relative`}>
+        <div className={`border-b-[1px] p-5 space-y-8 border-[#FFFFFF2E] md:space-x-5 md:px-20 md:py-14 flex flex-col md:flex-row justify-center items-center md:items-start relative`}>
             <div className='md:space-y-14 space-y-8 w-5/6 md:w-[550px]   '>
                 <div className='flex flex-col w-full  text-center md:text-left space-y-5 items-center md:items-start'>
                     <h1 className={`${revalia.className} text-base md:text-lg`}>
