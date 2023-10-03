@@ -64,16 +64,16 @@ const Herosection = () => {
                         <div className={`flex flex-col items-center text-center md:items-start text-[24px] md:font-extrabold md:relative md:text-[50px] ${revalia.className}`}>
                             <div className="relative ">
                                 <h2 className="tracking-wider">getlinked Tech </h2>
-                                <div className="absolute w-[25px] h-[25px] top-[-1rem] right-[0.5rem] md:w-[45px] md:h-[50px] md:right-8 md:top-[-1.5rem]">
+                                <div className="absolute w-[25px] h-[25px] top-[-0.8rem] right-[0.7rem] md:w-[45px] md:h-[50px] md:right-8 md:top-[-1.5rem]">
                                     <Image src={bulb} fill alt="" />
                                 </div>
                             </div>
                             <div className="flex ">
                                 <h2 className="tracking-wider">Hackathon 1.0 </h2>
-                                <div className="relative w-[35px] h-[25px] mt-1 md:w-[40px] md:h-[50px] md:mt-2 ml-2 ">
+                                <div className="relative w-[35px] h-[25px] mt-1 md:w-[50px] md:h-[50px] md:mt-3 ml-2 ">
                                     <Image src={linkage} fill alt="" />
                                 </div>
-                                <div className="relative w-[35px] h-[25px] mt-1 md:w-[40px] md:h-[50px] md:mt-2 mx-1">
+                                <div className="relative w-[35px] h-[25px] mt-1 md:w-[50px] md:h-[50px] md:mt-3 mx-1">
                                     <Image src={fire} fill alt="" />
                                 </div>
                             </div>
