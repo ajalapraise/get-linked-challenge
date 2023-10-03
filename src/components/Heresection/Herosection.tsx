@@ -47,51 +47,57 @@ const Herosection = () => {
     };
 
     return (
-        <div className={`  justify-evenly relative items-center px-2 md:px-16 pt-6 border-b-[1px] border-[#FFFFFF2E] w-full`}>
-            <div className="text-center md:relative">
-                <div className="mt-[-2rem] w-[200px] md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
-                    <h2 className={`text-base mt-8 md:text-[24px] font-bold`}>Igniting a Revolution in HR innovation
-                        <div className="hidden md:flex md:justify-end">
-                            <Image src={underline} width={160} alt="" />
+        <div className={`  justify-evenly relative items-center px-2 md:px-16 pt-6 md:pt-3 border-b-[1px] border-[#FFFFFF2E] w-full`}>
+            <div className="flex items-center justify-center md:relative">
+                <div className="mt-[-3.5rem] mb-12 md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
+                    <h2 className={`text-base  mt-14 md:mt-32 text-center sm:text-[22px] font-bold relative`}>Igniting a Revolution in HR innovation
+                        <div className=" absolute md:flex   right-0 w-[90px] h-[7px] sm:w-[145px] md:h-[9px]">
+                            <Image src={underline} fill alt="" />
                         </div>
-                        <div className="  flex justify-end absolute right-12 md:hidden ">
-                            <Image src={underline} width={90} alt="" />
-                        </div>
+
                     </h2>
                 </div>
             </div>
             <div className={`w-full flex flex-col items-center md:flex-row`}>
-                <div className={`w-full mt-6 space-y-7 `}>
-                    <div className={` space-y-3`}>
-                        <div className={`flex flex-col items-center text-center md:items-start text-sm md:font-extrabold md:relative md:text-[45px] ${revalia.className}`}>
-                            <h2>getlinked Tech </h2>
-                            <div className="flex space-x-3">
-                                <h2>Hackathon 1.0 </h2>
-                                <Image src={linkage} width={50} height={50} alt="" />
-                                <Image src={fire} width={45} height={30} alt="" />
+                <div className={`w-full md:w-full space-y-7  flex justify-center flex-col`}>
+                    <div className={` space-y-3 md:space-y-0`}>
+                        <div className={`flex flex-col items-center text-center md:items-start text-[20px] md:font-extrabold md:relative md:text-[40px] ${revalia.className}`}>
+                            <div className="relative">
+                                <h2 className="">getlinked Tech </h2>
+                                <div className="absolute w-[25px] h-[25px] top-[-1.2rem] right-[0.3rem] md:w-[45px] md:h-[50px] md:right-4 md:top-[-2rem]">
+                                    <Image src={bulb} fill alt="" />
+                                </div>
                             </div>
-                            <div className="absolute left-[22.5rem] top-[-2.5rem]">
-                                <Image src={bulb} width={40} height={11} alt="" />
+                            <div className="flex ">
+                                <h2>Hackathon 1.0 </h2>
+                                <div className="relative w-[35px] h-[25px] mt-1 md:w-[40px] md:h-[50px] md:mt-2 ml-2 ">
+                                    <Image src={linkage} fill alt="" />
+                                </div>
+                                <div className="relative w-[35px] h-[25px] mt-1 md:w-[40px] md:h-[50px] md:mt-2 mx-1">
+                                    <Image src={fire} fill alt="" />
+                                </div>
                             </div>
                         </div>
-                        <p className={`w-[500px] text-[17px]`}>
+                        <p className={`text-center md:text-left md:w-[500px] text-base md:text-[17px]`}>
                             Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize
                         </p>
                     </div>
-                    <div className={`flex  items-center w-[150px] `}>
+                    <div className={`flex  justify-center md:justify-start items-center md:w-[150px] `}>
                         <Link href="/auth">
                             <Button btnValue="Register" />
                         </Link>
                     </div>
-                    <div className={`font-extrabold text-sm space-x-5 flex `}>
+                    <div className={`font-extrabold text-sm space-x-5 flex justify-center md:justify-start `}>
                         <h1><span className={`text-lg`}>{formatTime(countdown.hours)} </span>H </h1>
                         <h1><span className={`text-lg`}>{formatTime(countdown.minutes)} </span>M </h1>
                         <h1><span className={`text-lg`}>{formatTime(countdown.seconds)} </span>S</h1>
                     </div>
                 </div >
 
-                <div className="mt-12  w-3/4 h-[250px] relative md:w-[900px] md:h-[440px]">
-                    <Image src={heroImage} fill alt="" />
+                <div className="w-3/4 flex justify-center">
+                    <div className="mt-12 w-full h-[250px]  sm:w-[400px] sm:h-[350px] relative md:w-[400px] md:h-[380px]">
+                        <Image src={heroImage} fill alt="" />
+                    </div>
                 </div>
             </div >
             {/* <div className=" absolute ml-10">

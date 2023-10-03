@@ -30,7 +30,7 @@ import check from '../../../public/landingPage/check.svg'
 export const Intro = () => {
     return (
         <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-16 md:py-14 flex flex-col md:flex-row justify-around items-center`}>
-            <div className='w-full flex items-start justify-start md:w-1/2'>
+            <div className='w-full flex justify-center items-center md:items-start md:justify-start md:w-1/2'>
                 <Image src={introImg} width={450} alt="" />
             </div>
             <div className='w-full flex flex-col items-center justify-center  md:items-start md:w-[450px] space-y-5 relative'>
@@ -75,7 +75,7 @@ export const Rules = () => {
 export const Criteria = () => {
     return (
         <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-a6 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
-            <div className='w-full flex items-center relative justify-center md:w-[550px] h-[250px] md:h-[550px]'>
+            <div className='w-full flex items-center relative justify-center sm:w-[350px] md:w-[550px] h-[300px] sm:h-[300px] md:h-[550px]'>
                 <Image src={criteriaImg} fill alt="" />
             </div>
 
