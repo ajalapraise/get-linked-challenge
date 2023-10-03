@@ -64,7 +64,7 @@ const Herosection = () => {
                         <div className={`flex flex-col items-center text-center md:items-start text-[20px] md:font-extrabold md:relative md:text-[40px] ${revalia.className}`}>
                             <div className="relative">
                                 <h2 className="">getlinked Tech </h2>
-                                <div className="absolute w-[25px] h-[25px] top-[-1.2rem] right-[0.3rem] md:w-[45px] md:h-[50px] md:right-4 md:top-[-2rem]">
+                                <div className="absolute w-[25px] h-[25px] top-[-1rem] right-[0.3rem] md:w-[45px] md:h-[50px] md:right-4 md:top-[-2rem]">
                                     <Image src={bulb} fill alt="" />
                                 </div>
                             </div>
