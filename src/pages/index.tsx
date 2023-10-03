@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import Herosection from "@/components/Heresection/Herosection";
 import { Criteria, FAQ, Intro, MdTimeline, Partners, Privacy, Prizes, Rules, SmTimeline } from "@/components/Landingpage/LandingPage";
+import Footer from "@/components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -23,6 +24,8 @@ const Home = () => {
         <Partners />
         <Privacy />
       </main>
+      <Footer />
+
     </div>
   );
 }

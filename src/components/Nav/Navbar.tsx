@@ -48,28 +48,28 @@ const Navbar = () => {
           <div className={`flex flex-col item-center space-y-4 relaive font-bold  md:flex-row md:space-x-12  md:space-y-0 `}>
             <Link
               href="#"
-              className={`hover:text-purple2  ${isLinkActive("/timeline") ? "md:text-[22px]" : ""}`}
+              className={`hover:text-purple2  ${isLinkActive("/timeline") ? "text-purple2" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Timeline
             </Link>
             <Link
               href="#"
-              className={`hover:text-purple2 ${isLinkActive("/overview") ? "md:text-[22px]" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/overview") ? "text-purple2" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Overview
             </Link>
             <Link
               href="#"
-              className={`hover:text-purple2 ${isLinkActive("/faqs") ? "md:text-[22px]" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/faqs") ? "text-purple2" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               FAQs
             </Link>
             <Link
               href="contact-us"
-              className={`hover:text-purple2 ${isLinkActive("/contact-us") ? "md:text-[22px]" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/contact-us") ? "text-purple2" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Contact
