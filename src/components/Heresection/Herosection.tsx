@@ -49,7 +49,7 @@ const Herosection = () => {
     return (
         <div className={`  justify-evenly relative items-center px-2 md:px-16 pt-6 md:pt-3 border-b-[1px] border-[#FFFFFF2E] w-full`}>
             <div className="flex items-center justify-center md:relative">
-                <div className="mt-[-3.5rem] mb-12 md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
+                <div className="mt-[-3.5rem] mb-8 md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
                     <h2 className={`text-base  mt-14 md:mt-32 text-center sm:text-[22px] font-bold relative`}>Igniting a Revolution in HR innovation
                         <div className=" absolute md:flex   right-0 w-[90px] h-[7px] sm:w-[145px] md:h-[9px]">
                             <Image src={underline} fill alt="" />
@@ -61,10 +61,10 @@ const Herosection = () => {
             <div className={`w-full flex flex-col items-center md:flex-row`}>
                 <div className={`w-full md:w-full space-y-7  flex justify-center flex-col`}>
                     <div className={` space-y-3 md:space-y-0`}>
-                        <div className={`flex flex-col items-center text-center md:items-start text-[20px] md:font-extrabold md:relative md:text-[40px] ${revalia.className}`}>
+                        <div className={`flex flex-col items-center text-center md:items-start text-[24px] md:font-extrabold md:relative md:text-[40px] ${revalia.className}`}>
                             <div className="relative">
                                 <h2 className="">getlinked Tech </h2>
-                                <div className="absolute w-[25px] h-[25px] top-[-1rem] right-[0.3rem] md:w-[45px] md:h-[50px] md:right-4 md:top-[-2rem]">
+                                <div className="absolute w-[25px] h-[25px] top-[-1rem] right-[0.5rem] md:w-[45px] md:h-[50px] md:right-4 md:top-[-2rem]">
                                     <Image src={bulb} fill alt="" />
                                 </div>
                             </div>
