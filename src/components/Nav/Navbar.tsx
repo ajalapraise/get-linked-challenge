@@ -40,12 +40,12 @@ const Navbar = () => {
         </div>
 
         <div className={`bg-purple3 flex  ${isNavOpen ? " flex-col w-[300px]  space-y-5 text-base   md:text-sm my-10  absolute right-0" : "hidden md:flex md:items-center md:space-x-10 lg:space-x-20   "}`}>
-          <div className={`w-2/3   ${isNavOpen ? " flex items-end justify-end absolute right-5 mt-[-40px]" : " hidden"}`}>
-            <button className="rounded-full border-2 border-[#903AFF]  w-[11px] relative p-2 h-[11px]" onClick={toggleNav}>
+          <div className={`w-2/3   ${isNavOpen ? " flex items-end justify-end absolute right-5 mt-[-35px]" : " hidden"}`}>
+            <button className="rounded-full  w-[15px] relative  h-[15px]" onClick={toggleNav}>
               <Image src={cancelBtn} fill alt="" />
             </button>
           </div>
-          <div className="flex flex-col  item-center space-y-4 font-bold  md:flex-row md:space-x-12  md:space-y-0">
+          <div className={`flex flex-col item-center space-y-4 relaive font-bold  md:flex-row md:space-x-12  md:space-y-0 `}>
             <Link
               href="#"
               className={`hover:text-purple2  ${isLinkActive("/timeline") ? "md:text-[22px]" : ""}`}

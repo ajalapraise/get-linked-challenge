@@ -70,7 +70,7 @@ const Herosection = () => {
                             </div>
                             <div className="flex ">
                                 <h2 className="tracking-wider">Hackathon 1.0 </h2>
-                                <div className="relative w-[35px] h-[25px] mt-1 md:w-[50px] md:h-[50px] md:mt-3 ml-2 ">
+                                <div className="relative w-[35px] h-[25px] mt-[5px] md:w-[50px] md:h-[50px] md:mt-3 ml-2 ">
                                     <Image src={linkage} fill alt="" />
                                 </div>
                                 <div className="relative w-[35px] h-[25px] mt-1 md:w-[50px] md:h-[50px] md:mt-3 mx-1">
