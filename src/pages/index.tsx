@@ -4,7 +4,7 @@ import Image from "next/image";
 import Herosection from "@/components/Heresection/Herosection";
 import { Criteria, FAQ, Intro, MdTimeline, Partners, Privacy, Prizes, Rules, SmTimeline } from "@/components/Landingpage/LandingPage";
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -26,3 +26,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home

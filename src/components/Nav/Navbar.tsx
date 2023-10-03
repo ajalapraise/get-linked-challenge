@@ -28,40 +28,45 @@ const Navbar = () => {
             </h4>
           </Link>
         </div>
-        <div className={`w-1/5 flex items-end justify-end  ${isNavOpen ? "flex flex-col  mt-[-150px] sm:absolute sm:right-[150px]" : " md:hidden"}`}>
+        <div className={`w-1/5 flex items-end justify-end  ${isNavOpen ? "hidden" : " md:hidden"}`}>
           <button className="  " onClick={toggleNav}>
             <Image src={navBtn} width={20} alt="" />
           </button>
         </div>
 
-        <div className={`bg-purple3 flex  ${isNavOpen ? " flex-col w-[100px] text-base border-l-[1px] border-[white]  md:text-sm my-10 px-5" : "hidden md:flex md:items-center md:space-x-10 lg:space-x-20   "}`}>
+        <div className={`bg-purple3 flex  ${isNavOpen ? " flex-col w-[100px] h-screen space-y-5 text-base border-l-[1px] border-[white]  md:text-sm my-10 pl-5" : "hidden md:flex md:items-center md:space-x-10 lg:space-x-20   "}`}>
+          <div className={`w-1/5   ${isNavOpen ? " flex items-end justify-end" : " hidden"}`}>
+            <button className="  " onClick={toggleNav}>
+              <Image src={navBtn} width={20} alt="" />
+            </button>
+          </div>
           <div className="flex flex-col  item-center space-y-4 font-bold  md:flex-row md:space-x-12  md:space-y-0">
             <Link
               href="#"
-              className={`hover:text-purple2 ${isLinkActive("/timeline") ? "text-[22px]" : ""}`}
+              className={`hover:text-purple2  ${isLinkActive("/timeline") ? "md:text-[22px]" : ""}`}
             >
               Timeline
             </Link>
             <Link
               href="#"
-              className={`hover:text-purple2 ${isLinkActive("/overview") ? "text-[22px]" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/overview") ? "md:text-[22px]" : ""}`}
             >
               Overview
             </Link>
             <Link
               href="#"
-              className={`hover:text-purple2 ${isLinkActive("/faqs") ? "text-[22px]" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/faqs") ? "md:text-[22px]" : ""}`}
             >
               FAQs
             </Link>
             <Link
-              href="#"
-              className={`hover:text-purple2 ${isLinkActive("/contact-us") ? "text-[22px]" : ""}`}
+              href="contact-us"
+              className={`hover:text-purple2 ${isLinkActive("/contact-us") ? "md:text-[22px]" : ""}`}
             >
               Contact
             </Link>
           </div>
-          <div className="flex items-center mt-4  md:mt-0">
+          <div className={`flex  items-center  my-4`}>
             <Link href="/auth">
               <Button btnValue="Register" />
             </Link>
