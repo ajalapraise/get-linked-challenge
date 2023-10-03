@@ -95,7 +95,7 @@ const Herosection = () => {
                 </div >
 
                 <div className="w-3/4 flex justify-center">
-                    <div className="mt-12 w-full h-[250px]  sm:w-[400px] sm:h-[350px] relative md:w-[400px] md:h-[380px]">
+                    <div className="mt-12 w-full h-[250px]  sm:w-[400px] sm:h-[350px] relative md:w-[400px] md:h-[420px]">
                         <Image src={heroImage} fill alt="" />
                     </div>
                 </div>
