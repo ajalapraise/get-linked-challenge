@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { revalia } from "@/styles/font";
 import { Button } from "@/components/Button/Button";
 import navBtn from "../../../public/navButton.svg";
+import cancelBtn from "../../../public/cancelBtn.svg";
 
 const Navbar = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-purple3 border-b-[1px] border-[#FFFFFF2E] w-full font-extrabold text-[white] p-1">
-      <div className="flex  items-center justify-between px-10 min-h-[90px] md:px-20 relative ">
+      <div className={`flex   px-10  ${isNavOpen ? " min-h-screen justify-start items-start mt-8" : "min-h-[60px] md:min-h-[90px] items-center justify-between"} md:px-20 relative  z-[9999]`}>
         <div className="w-2/5 flex justify-left items-center `">
           <Link href="/" className={`flex items-center ${revalia.className}`}>
             <h4 className="text-base md:text-lg font-extrabold ">
@@ -34,10 +35,10 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className={`bg-purple3 flex  ${isNavOpen ? " flex-col w-[100px] h-screen space-y-5 text-base border-l-[1px] border-[white]  md:text-sm my-10 pl-5" : "hidden md:flex md:items-center md:space-x-10 lg:space-x-20   "}`}>
-          <div className={`w-1/5   ${isNavOpen ? " flex items-end justify-end" : " hidden"}`}>
-            <button className="  " onClick={toggleNav}>
-              <Image src={navBtn} width={20} alt="" />
+        <div className={`bg-purple3 flex  ${isNavOpen ? " flex-col w-[300px]  space-y-5 text-base mt-24  md:text-sm my-10 pl-5 absolute right-0" : "hidden md:flex md:items-center md:space-x-10 lg:space-x-20   "}`}>
+          <div className={`w-2/3   ${isNavOpen ? " flex items-end justify-end absolute right-5 " : " hidden"}`}>
+            <button className="" onClick={toggleNav}>
+              <Image src={cancelBtn} width={20} alt="" />
             </button>
           </div>
           <div className="flex flex-col  item-center space-y-4 font-bold  md:flex-row md:space-x-12  md:space-y-0">
@@ -79,55 +80,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-// return (
-//   <div
-//     className={`p-1 flex items-center bg-purple3 justify-evenly h-[100px] border-b-[1px] border-[#FFFFFF2E]  w-full font-extrabold`}
-//   >
-//     <div className={`w-2/5 flex justify-left pl-20`}>
-//       <Link href="/" className={`flex items-center ${revalia.className} `}>
-//         <h4 className={`text-lg font-extrabold text-[white] `}>
-//           get<span className="text-purple5">linked</span>
-//         </h4>
-//       </Link>
-//     </div>
-
-//     <div className="flex  space-x-12 items-center font-extrabold text-sm text-[white] w-2/5 ">
-//       <Link
-//         href="#"
-//         className={`hover:text-purple2 ${isLinkActive("/timeline") ? "text-[22px]" : ""
-//           }`}
-//       >
-//         Timeline
-//       </Link>
-//       <Link
-//         href="#"
-//         className={`hover:text-purple2 ${isLinkActive("/overview") ? "text-[22px]" : ""
-//           }`}
-//       >
-//         Overview
-//       </Link>
-//       <Link
-//         href="#"
-//         className={`hover:text-purple2 ${isLinkActive("/faqs") ? "text-[22px]" : ""
-//           }`}
-//       >
-//         FAQs
-//       </Link>
-//       <Link
-//         href="#"
-//         className={`hover:text-purple2 ${isLinkActive("/contact-us") ? "text-[22px]" : ""
-//           }`}
-//       >
-//         Contact Us
-//       </Link>
-//     </div>
-
-//     <div className={`flex  items-center w-1/5`}>
-//       <Link href="/auth">
-//         <Button btnValue="Register" />
-//       </Link>
-//     </div>
-//   </div>
-// );

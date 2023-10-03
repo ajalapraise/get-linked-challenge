@@ -8,7 +8,7 @@ interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({ btnValue, className }) => {
   return (
-    <div className={` bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] cursor-pointer`}>
+    <div className={` bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] cursor-pointer flex items-center`}>
       <input
         type="button"
         value={btnValue}
