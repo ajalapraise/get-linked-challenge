@@ -152,7 +152,7 @@ const contact: React.FC<FormState> = () => {
                             <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] flex items-center w-[150px] h-[50px] justify-center `}>
                                 <button
                                     type="submit"
-                                    className={` text-[16px]  cursor-pointer text-[white] font-extrabold hover:bg-purple1  py-1 px-2 text-center justify-center w-[150px] h-[50px] items-center ${isAllFieldsFilled() ? '' : 'cursor-not-allowed opacity-50'}`}
+                                    className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-[150px] h-[50px] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
                                     disabled={!isAllFieldsFilled()}
                                 >
                                     Submit
