@@ -81,7 +81,7 @@ const contact: React.FC<FormState> = () => {
     return (
         <div className={`  justify-evenly relative items-center px-10 md:px-20 pt-10 md:pt-3 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
             <div className={`flex flex-col`}>
-                <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center mb-16 md:hidden`}>
+                <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center mb-12 md:hidden`}>
                     <button className="bg-purple3 flex justify-center items-center w-[28px] h-[27px] rounded-full">
                         <IoIosArrowBack className={`text-[white] w-[15px] h-[15px]`} />
                     </button>
