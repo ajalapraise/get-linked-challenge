@@ -28,6 +28,8 @@ const config: Config = {
       purple3: "#150E28",
       purple4: "#150E28",
       purple5: "#D434FE",
+      transparent: 'transparent',
+
     },
     extend: {
       fontFamily: {

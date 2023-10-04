@@ -8,8 +8,11 @@ import twitter from "../../public/twitter.svg";
 import facebook from "../../public/facebook.svg";
 import linkedin from "../../public/linkedin.svg";
 import { IoIosArrowBack } from 'react-icons/io'
+import { revalia } from "@/styles/font";
+
 // import { useSession } from "next-auth/react";
 // import router from "next/router";
+
 interface FormState {
     firstName: string;
     phoneNumber: string;
@@ -25,7 +28,6 @@ const contact: React.FC<FormState> = () => {
         email: "",
 
     });
-    const [showPassword, setShowPassword] = useState(false);
 
     // const { data: session } = useSession();
 
@@ -77,53 +79,57 @@ const contact: React.FC<FormState> = () => {
         // }
     };
     return (
-        <div className={`  justify-evenly relative items-center px-10 md:px-20 pt-6 md:pt-3 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
+        <div className={`  justify-evenly relative items-center px-10 md:px-20 pt-10 md:pt-3 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
             <div className={`flex flex-col`}>
-                <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center`}>
+                <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center mb-16 md:hidden`}>
                     <button className="bg-purple3 flex justify-center items-center w-[28px] h-[27px] rounded-full">
-                        <IoIosArrowBack className={`text-[white] w-[20px] h-[20px]`} />
+                        <IoIosArrowBack className={`text-[white] w-[15px] h-[15px]`} />
                     </button>
                 </div>
-                <div>
-                    <h1>
-                        Questions or need assistance? Let us know about it
+                <div className={`flex flex-col space-y-7 md:hidden`}>
+                    <h1 className={`${revalia.className} font-extrabold text-[14px] w-[230px]  text-[#D434FE]`}>
+                        Questions or need assistance? <br />Let us know about it
                     </h1>
-                    <h2>
+                    <h2 className={`font-bold text-[12px] w-[240px] md:hidden`}>
                         Email us below to any question related to our event
                     </h2>
                 </div>
-                <div className="w-full p-4 md:w-[450px]">
+                <div className="w-full mt-10 md:w-[450px]">
 
-                    <form action="" onSubmit={onSubmit} className={`space-y-5  p-5`}>
-                        <div className={``}>
+                    <form action="" onSubmit={onSubmit} className={`space-y-5 `}>
+                        <div className={`border-[1px] rounded-md border-[white]`}>
 
                             <input
                                 type="firstName"
-                                placeholder="Enter your email-address"
+                                placeholder="Enter your Name"
                                 id="firstame"
                                 name="firstName"
-                                className={``}
+                                className={`bg-transparent h-[40px] w-full px-3 text-[white] font-bold text-[16px] focus:outline-none`}
                                 value={formData.firstName}
                                 onChange={handleChange}
                                 required
                             />
                         </div>
-                        <div className={`flex flex-col`}>
+                        <div className={`border-[1px] rounded-md border-[white]`}>
 
                             <div className={``}>
-                                <input type="tel" placeholder='Enter phone number' name='phoneNumber' id='phoneNumber' className={``} value={formData.phoneNumber} onChange={handleChange} onKeyDown={handlePhoneNumberKeyDown} required maxLength={11} minLength={11}
+                                <input type="tel" placeholder='Enter phone number' name='phoneNumber' id='phoneNumber'
+                                    className={`bg-transparent h-[40px] px-3 text-[white] w-full font-bold text-[16px] focus:outline-none`}
+                                    value={formData.phoneNumber}
+                                    onChange={handleChange}
+                                    onKeyDown={handlePhoneNumberKeyDown} required maxLength={11} minLength={11}
                                 />
                             </div>
                         </div>
 
-                        <div className={`flex flex-col `}>
+                        <div className={`border-[1px] rounded-md border-[white]`}>
 
                             <input
                                 type="email"
                                 placeholder="Email"
                                 id="email"
                                 name="email"
-                                className={``}
+                                className={`bg-transparent h-[40px] px-3 text-[white] font-bold w-full text-[16px] focus:outline-none`}
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
@@ -131,27 +137,27 @@ const contact: React.FC<FormState> = () => {
                         </div>
 
 
-                        <div className={`flex flex-col `}>
-
+                        <div className={`border-[1px] rounded-md border-[white]`}>
                             <textarea
-                                placeholder="Body"
-                                id="body"
-                                name="body"
-                                className={``}
+                                placeholder="Message"
+                                id="message"
+                                name="message"
+                                className={`bg-transparent h-[150px] p-3 text-[white] font-bold w-full text-[16px] focus:outline-none resize-none `}
                                 value={formData.message}
                                 onChange={handleChange}
                                 required
                             />
                         </div>
-
-                        <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] cursor-pointer flex items-center justify-center `}>
-                            <button
-                                type="submit"
-                                className={` text-[12px] w-[100px] h-[30px] md:text-[16px]  cursor-pointer text-[white] md:w-[120px] md:h-[45px] font-bold hover:bg-purple1 rounded-[5px]  py-1 px-2 text-center justify-center items-center ${isAllFieldsFilled() ? '' : 'cursor-not-allowed opacity-50'}`}
-                                disabled={!isAllFieldsFilled()}
-                            >
-                                Submit
-                            </button>
+                        <div>
+                            <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] flex items-center w-[150px] h-[50px] justify-center `}>
+                                <button
+                                    type="submit"
+                                    className={` text-[16px]  cursor-pointer text-[white] font-extrabold hover:bg-purple1  py-1 px-2 text-center justify-center w-[150px] h-[50px] items-center ${isAllFieldsFilled() ? '' : 'cursor-not-allowed opacity-50'}`}
+                                    disabled={!isAllFieldsFilled()}
+                                >
+                                    Submit
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
