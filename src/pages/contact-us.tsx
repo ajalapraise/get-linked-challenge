@@ -79,7 +79,7 @@ const contact: React.FC<FormState> = () => {
         // }
     };
     return (
-        <div className={`  justify-evenly relative items-center px-10 md:px-20 pt-10 md:pt-3 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
+        <div className={`  justify-evenly relative items-center px-10 md:px-20 py-10 md:pt-3 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
             <div className={`flex flex-col`}>
                 <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center mb-12 md:hidden`}>
                     <button className="bg-purple3 flex justify-center items-center w-[28px] h-[27px] rounded-full">
@@ -94,9 +94,8 @@ const contact: React.FC<FormState> = () => {
                         Email us below to any question related to our event
                     </h2>
                 </div>
-                <div className="w-full mt-10 md:w-[450px]">
-
-                    <form action="" onSubmit={onSubmit} className={`space-y-5 `}>
+                <div className="w-full my-10 md:w-[450px]">
+                    <form action="" onSubmit={onSubmit} className={`space-y-8 `}>
                         <div className={`border-[1px] rounded-md border-[white]`}>
 
                             <input
@@ -148,11 +147,11 @@ const contact: React.FC<FormState> = () => {
                                 required
                             />
                         </div>
-                        <div>
-                            <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] flex items-center w-[150px] h-[50px] justify-center `}>
+                        <div className="flex items-center justify-center">
+                            <div className={` rounded-[5px] flex items-center w-[150px] h-[50px] justify-center `}>
                                 <button
                                     type="submit"
-                                    className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-[150px] h-[50px] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
+                                    className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-[150px] h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
                                     disabled={!isAllFieldsFilled()}
                                 >
                                     Submit
@@ -170,9 +169,9 @@ const contact: React.FC<FormState> = () => {
                         <h3>we are open from Monday-Friday, 08:00am - 05:00pm</h3>
                     </div>
 
-                    <div>
-                        <h1>Share on</h1>
-                        <div className=" flex space-x-2 md:space-x-4 items-center">
+                    <div className="flex items-center justify-center flex-col space-y-4">
+                        <h1 className="text-sm font-extrabold text-[#D434FE]">Share on</h1>
+                        <div className=" flex space-x-3 md:space-x-4 items-center">
                             <Link href='https://www.instagram.com/accounts/login/' className={` items-center flex justify-center relative w-[20px] h-[20px]`} target="_blank">
                                 <Image src={insta} fill alt="" />
                             </Link>
