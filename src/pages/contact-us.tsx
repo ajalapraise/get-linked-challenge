@@ -82,9 +82,11 @@ const contact: React.FC<FormState> = () => {
         <div className={`  justify-evenly relative items-center px-10 md:px-20 py-10 md:pt-3 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
             <div className={`flex flex-col`}>
                 <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center mb-12 md:hidden`}>
-                    <button className="bg-purple3 flex justify-center items-center w-[28px] h-[27px] rounded-full">
-                        <IoIosArrowBack className={`text-[white] w-[15px] h-[15px]`} />
-                    </button>
+                    <Link href='/'>
+                        <button className="bg-purple3 flex justify-center items-center w-[28px] h-[27px] rounded-full">
+                            <IoIosArrowBack className={`text-[white] w-[15px] h-[15px]`} />
+                        </button>
+                    </Link>
                 </div>
                 <div className={`flex flex-col space-y-7 md:hidden`}>
                     <h1 className={`${revalia.className} font-extrabold text-[14px] w-[230px]  text-[#D434FE]`}>
