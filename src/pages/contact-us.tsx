@@ -79,9 +79,9 @@ const contact: React.FC<FormState> = () => {
         // }
     };
     return (
-        <div className={`  justify-evenly relative items-center px-10 md:px-20 py-10 md:py-24 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
+        <div className={`  justify-evenly relative items-center px-10 md:px-20 py-10 md:py-20 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
             <div className="w-full md:p-5  md:h-[670px] justify-center items-center ">
-                <div className={`md:p-5 p-2 flex flex-col md:justify-between md:items-center  md:flex-row-reverse  md:w-full `}>
+                <div className={`md:p-3 p-2 flex flex-col md:justify-between md:items-center  md:flex-row-reverse  md:w-full `}>
                     <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center   mb-12 md:hidden`}>
                         <Link href='/'>
                             <button className="bg-purple3 flex justify-center items-center w-[28px] h-[27px] rounded-full">
@@ -89,83 +89,85 @@ const contact: React.FC<FormState> = () => {
                             </button>
                         </Link>
                     </div>
-                    <div className={`m:flex md:border-[1px] w-full md:border-[blue]  md:w-[650px] md:justify-center md:items-center  md:px-5 md:py-14 shadow-md`}>
-                        <div className={`md:flex md:flex-col space-y-7 mx-auto  md:justify-center md:items-center md:w-[550px] `}>
-                            <div className={` space-y-7  `}>
-                                <h1 className={`${revalia.className} font-extrabold text-[14px] w-[230px]  text-[#D434FE]`}>
-                                    Questions or need assistance? <br />Let us know about it
-                                </h1>
-                                <h2 className={`font-bold text-[12px] w-[240px] md:hidden`}>
-                                    Email us below to any question related to our event
-                                </h2>
-                            </div>
-                            <div className="w-full my-10 justify-center items-center  md:w-[450px]">
-                                <form action="" onSubmit={onSubmit} className={`space-y-8   w-full `}>
-                                    <div className={`border-[1px] rounded-md border-[white]`}>
-                                        <input
-                                            type="firstName"
-                                            placeholder="Enter your Name"
-                                            id="firstame"
-                                            name="firstName"
-                                            className={`bg-transparent h-[40px] w-full px-3 text-[white] font-bold text-[16px] focus:outline-none`}
-                                            value={formData.firstName}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-                                    <div className={`border-[1px] rounded-md border-[white]`}>
-                                        <div className={``}>
-                                            <input type="tel" placeholder='Enter phone number' name='phoneNumber' id='phoneNumber'
-                                                className={`bg-transparent h-[40px] px-3 text-[white] w-full font-bold text-[16px] focus:outline-none`}
-                                                value={formData.phoneNumber}
+                    <div className={`md:flex  w-full  md:rounded-md md:bg-[#FFFFFF05] md:w-3/5 md:justify-center md:items-center  md:px-5 md:py-14 md:shadow-lg`}>
+                        <div className={` mx-auto  md:flex md:justify-center md:items-start  md:w-[550px] `}>
+                            <div className={`md:flex md:flex-col space-y-3   `}>
+                                <div className={` space-y-5 flex flex-col items-start  md:w-full md:p-5`}>
+                                    <h1 className={`${revalia.className} font-extrabold text-[14px] w-[230px] md:w-full text-[#D434FE]`}>
+                                        Questions or need assistance? <br />Let us know about it
+                                    </h1>
+                                    <h2 className={`font-bold text-[12px] w-[240px] md:hidden`}>
+                                        Email us below to any question related to our event
+                                    </h2>
+                                </div>
+                                <div className="w-full my-10 justify-center items-center md:p-3 md:w-[450px]">
+                                    <form action="" onSubmit={onSubmit} className={`space-y-5   w-full `}>
+                                        <div className={`border-[1px] rounded-md border-[white]`}>
+                                            <input
+                                                type="firstName"
+                                                placeholder="Enter your Name"
+                                                id="firstame"
+                                                name="firstName"
+                                                className={`bg-transparent h-[40px] w-full px-3 text-[white] font-bold text-[16px] focus:outline-none`}
+                                                value={formData.firstName}
                                                 onChange={handleChange}
-                                                onKeyDown={handlePhoneNumberKeyDown} required maxLength={11} minLength={11}
+                                                required
                                             />
                                         </div>
-                                    </div>
-
-                                    <div className={`border-[1px] rounded-md border-[white]`}>
-                                        <input
-                                            type="email"
-                                            placeholder="Email"
-                                            id="email"
-                                            name="email"
-                                            className={`bg-transparent h-[40px] px-3 text-[white] font-bold w-full text-[16px] focus:outline-none`}
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-
-
-                                    <div className={`border-[1px] rounded-md border-[white]`}>
-                                        <textarea
-                                            placeholder="Message"
-                                            id="message"
-                                            name="message"
-                                            className={`bg-transparent h-[150px] p-3 text-[white] font-bold w-full text-[16px] focus:outline-none resize-none `}
-                                            value={formData.message}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                    </div>
-                                    <div className="flex items-center justify-center">
-                                        <div className={` rounded-[5px] flex items-center w-[150px] h-[50px] justify-center `}>
-                                            <button
-                                                type="submit"
-                                                className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-[150px] h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
-                                                disabled={!isAllFieldsFilled()}
-                                            >
-                                                Submit
-                                            </button>
+                                        <div className={`border-[1px] rounded-md border-[white]`}>
+                                            <div className={``}>
+                                                <input type="tel" placeholder='Enter phone number' name='phoneNumber' id='phoneNumber'
+                                                    className={`bg-transparent h-[40px] px-3 text-[white] w-full font-bold text-[16px] focus:outline-none`}
+                                                    value={formData.phoneNumber}
+                                                    onChange={handleChange}
+                                                    onKeyDown={handlePhoneNumberKeyDown} required maxLength={11} minLength={11}
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+
+                                        <div className={`border-[1px] rounded-md border-[white]`}>
+                                            <input
+                                                type="email"
+                                                placeholder="Email"
+                                                id="email"
+                                                name="email"
+                                                className={`bg-transparent h-[40px] px-3 text-[white] font-bold w-full text-[16px] focus:outline-none`}
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+
+
+                                        <div className={`border-[1px] rounded-md border-[white]`}>
+                                            <textarea
+                                                placeholder="Message"
+                                                id="message"
+                                                name="message"
+                                                className={`bg-transparent h-[150px] p-3 text-[white] font-bold w-full text-[16px] focus:outline-none resize-none `}
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                        </div>
+                                        <div className="flex items-center justify-center">
+                                            <div className={` rounded-[5px] flex items-center w-[150px] h-[50px] justify-center `}>
+                                                <button
+                                                    type="submit"
+                                                    className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-[150px] h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
+                                                    disabled={!isAllFieldsFilled()}
+                                                >
+                                                    Submit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="md:w-1/4 md:px-5 space-y-6">
-                        <div className={`hidden md:flex md:flex-col space-y-7  text-[white]`}>
+                    <div className="md:w-1/4 md:px-5 space-y-5 md:mt-[-40px]">
+                        <div className={`hidden md:flex md:flex-col space-y-5  text-[white]`}>
                             <h1 className={`${revalia.className} text-lg text-[#D434FE] font-extrabold`}>Get in touch</h1>
                             <h3 className="text-base w-[100px] font-extrabold">Contact Information</h3>
                             <h3 className="text-base w-[110px] font-extrabold">27, Alara Street, Yaba 100012, Lagos State</h3>
