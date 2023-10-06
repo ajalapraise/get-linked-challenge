@@ -2,6 +2,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import Link from "next/link";
 import React, { useState } from "react";
+import Image from "next/image";
+import manWalking from "../../../public/man-walking.svg";
+import ladyWalking from "../../../public/lady-walking.svg";
+import register from "../../../public/register.svg";
+
 interface FormState {
   firstName: string;
   lastName: string;
@@ -149,11 +154,29 @@ const index = () => {
   }
 
   return (
-    <div>
-      <div>
+    <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
+      <div className={`relative w-full h-[250px] md:w-[500px] md:h-[400px]`}>
+        <Image src={register} fill alt="" />
 
       </div>
       <div>
+        <div className="flex flex-col space-y-8">
+          <div className="flex space-x-5  items-center">
+            <h2 className="font-bold text-sm ">Be part of this movement! </h2>
+            <div className="flex justify-center w-[150px] mt-[-13px] space-x-2 items-center border-b-2 border-[#D434FE] border-dashed">
+              <div className={`relative w-[30px] h-[30px]`}>
+                <Image src={ladyWalking} fill alt="" />
+              </div>
+              <div className={`relative  w-[30px] h-[30px]`}>
+                <Image src={manWalking} fill alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h1 className="font-bold text-xl">CREATE YOUR ACCOUNT</h1>
+          </div>
+        </div>
         <div className='mb-10  w-[500px]'>
           <form action="" onSubmit={onSubmit}>
             <div className={`space-y-4 mb-10`}>
