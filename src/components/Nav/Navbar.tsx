@@ -76,7 +76,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className={`flex  items-center  my-4`} onClick={closeNav}>
-            <Link href="/auth">
+            <Link href="/register">
               <Button btnValue="Register" />
             </Link>
           </div>
