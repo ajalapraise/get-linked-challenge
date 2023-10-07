@@ -174,7 +174,7 @@ const index = () => {
           </div>
 
           <div>
-            <h1 className="font-bold text-xl">CREATE YOUR ACCOUNTs</h1>
+            <h1 className="font-bold text-xl">CREATE YOUR ACCOUNT</h1>
           </div>
         </div>
         <div className='mb-10  w-[500px]'>
