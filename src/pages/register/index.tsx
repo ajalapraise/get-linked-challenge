@@ -183,7 +183,7 @@ const index = () => {
               <div className={`flex justify-between`}>
                 <div className={`flex flex-col basis-[48%]`}>
                   <label htmlFor="firstName" className={`font-extrabold text-[16px]  my-3`}>
-                    First Name <span className={`text-red10`}>*</span>
+                    First Name <span className={`text-red10`}></span>
                   </label>
                   <input type="text" placeholder='First name' id='firstName' name='firstName' className={` border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl`} value={formData.firstName} onChange={handleChange} required
 
