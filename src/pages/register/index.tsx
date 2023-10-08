@@ -192,7 +192,7 @@ const index = () => {
 
                 <div className={`flex flex-col basis-[48%]`}>
                   <label htmlFor="lastName" className={`font-bold text-[16px]  my-3`}>
-                    Last Name <span className={`text-red10`}>*</span>
+                    Last Name <span className={`text-red10`}></span>
                   </label>
                   <input type="text" placeholder='Last name' id='lastName' name='lastName' className={`border-medium border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl`} value={formData.lastName} onChange={handleChange} required
                   />
@@ -201,7 +201,7 @@ const index = () => {
 
               <div className={`flex flex-col`}>
                 <label htmlFor="address" className={`font-bold text-[16px] my-3`}>
-                  Address <span className={`text-red10`}>*</span>
+                  Address <span className={`text-red10`}></span>
                 </label>
                 <input type="text" id='address' name='address' placeholder='Enter your address' className={`border-medium border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl w-full`} value={formData.address} onChange={handleChange} required
                 />
