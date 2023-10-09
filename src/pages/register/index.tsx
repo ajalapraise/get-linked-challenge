@@ -234,7 +234,7 @@ const index = () => {
               <div className={` rounded-[5px] flex items-center w-2/3 md:w-full justify-center `}>
                 <button
                   type="submit"
-                  className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-2/3 md:w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
+                  className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
                   disabled={!isAllFieldsFilled()}>
                   Register Now
                 </button>
