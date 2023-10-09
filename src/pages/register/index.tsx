@@ -123,7 +123,9 @@ const index = () => {
 
   return (
     <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-12 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
-      <div className=" w-full md:w-2/3 flex justify-start">
+      <div className=" w-full md:w-2/3 flex flex-col md:flex-row justify-start">
+        <h1 className="text-[#D434FE] md:hidden mb-5 flex text-lg  font-extrabold">Register</h1>
+
         <div className=" w-full h-[250px]  sm:w-[300px] sm:h-[350px] relative md:w-[600px] md:h-[600px]">
           <Image src={register} fill alt="" />
         </div>
