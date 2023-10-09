@@ -122,15 +122,15 @@ const index = () => {
   }
 
   return (
-    <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-12 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
+    <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
       <div className=" w-full md:w-2/3 flex flex-col md:flex-row justify-start">
         <h1 className="text-[#D434FE] md:hidden mb-5 flex text-lg  font-extrabold">Register</h1>
 
-        <div className=" w-full h-[250px]  sm:w-[300px] sm:h-[350px] relative md:w-[600px] md:h-[600px]">
+        <div className=" w-full h-[250px]  sm:w-[300px] sm:h-[350px] relative md:w-[500px] md:h-[600px]">
           <Image src={register} fill alt="" />
         </div>
       </div>
-      <div className={`w-full  my-10  md:rounded-md md:bg-[#FFFFFF08] md:p-10 md:w-[600px] md:flex md:flex-col md:shadow-lg`}>
+      <div className={`w-full  my-10  md:rounded-md md:bg-[#FFFFFF08] md:p-10 md:px-16 md:w-[700px] md:flex md:flex-col md:shadow-lg`}>
         <div className="flex flex-col space-y-5 md:w-[500px] justify-center ">
           <h1 className="text-[#D434FE] hidden md:flex md:text-lg mb-5 font-extrabold">Register</h1>
           <div className="flex space-x-2 md:space-x-5  items-center">
