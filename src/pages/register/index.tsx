@@ -201,7 +201,7 @@ const index = () => {
                   </select>
                 </div>
 
-                <div className={`flex flex-col basis-[30%] md:basis-[47%]`}>
+                <div className={`flex flex-col basis-[35%] md:basis-[47%]`}>
                   <label htmlFor="lastName" className={`font-bold text-[16px]  my-3`}>
                     Group Size <span className={`text-red10`}></span>
                   </label>
