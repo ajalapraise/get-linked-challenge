@@ -188,7 +188,7 @@ const index = () => {
               </div>
 
               <div className={`flex justify-between`}>
-                <div className={`flex flex-col basis-[60%] md:basis-[47%]`}>
+                <div className={`flex flex-col basis-[55%] md:basis-[47%]`}>
                   <label htmlFor="category" className={`font-bold text-[16px]  my-3`}>
                     Category
                   </label>
