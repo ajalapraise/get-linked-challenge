@@ -130,7 +130,7 @@ const index = () => {
       </div>
       <div className={`w-full  my-10  md:rounded-md md:bg-[#FFFFFF08] md:p-10 md:w-[600px] md:flex md:flex-col md:shadow-lg`}>
         <div className="flex flex-col space-y-5 md:w-[500px] justify-center ">
-          <h1 className="text-[#D434FE] md:text-lg mb-5 font-extrabold">Register</h1>
+          <h1 className="text-[#D434FE] hidden md:flex md:text-lg mb-5 font-extrabold">Register</h1>
           <div className="flex space-x-2 md:space-x-5  items-center">
             <h2 className="font-bold text-base md:text-[18px] ">Be part of this movement! </h2>
             <div className="flex justify-center w-[70px] md:w-[100px] mt-[-13px] space-x-1 items-center border-b-2 border-[#D434FE] border-dashed">
@@ -150,8 +150,8 @@ const index = () => {
         <div className='w-full'>
           <form action="" onSubmit={onSubmit}>
             <div className={`space-y-4 mb-10`}>
-              <div className={`flex justify-between`}>
-                <div className={`flex flex-col basis-[47%]`}>
+              <div className={`flex flex-col md:flex-row justify-between`}>
+                <div className={`flex flex-col md:basis-[47%]`}>
                   <label htmlFor="teamName" className={`font-bold text-[16px]  my-3`}>
                     Team's Name
                   </label>
@@ -160,7 +160,7 @@ const index = () => {
                   />
                 </div>
 
-                <div className={`flex flex-col basis-[47%]`}>
+                <div className={`flex flex-col md:basis-[47%]`}>
                   <label htmlFor="phoneNumber" className={`font-bold text-[16px] my-3`}>
                     Phone
                   </label>
@@ -169,8 +169,8 @@ const index = () => {
                 </div>
               </div>
 
-              <div className={`flex justify-between`}>
-                <div className={`flex flex-col basis-[47%]`}>
+              <div className={`flex flex-col md:flex-row justify-between`}>
+                <div className={`flex flex-col md:basis-[47%]`}>
                   <label htmlFor="email" className={`font-bold text-[16px] my-3`}>
                     Email
                   </label>
@@ -178,7 +178,7 @@ const index = () => {
                   />
                 </div>
 
-                <div className={`flex flex-col basis-[47%]`}>
+                <div className={`flex flex-col md:basis-[47%]`}>
                   <label htmlFor="projectTopic" className={`font-bold text-[16px]  my-3`}>
                     Project Topic
                   </label>
@@ -188,7 +188,7 @@ const index = () => {
               </div>
 
               <div className={`flex justify-between`}>
-                <div className={`flex flex-col basis-[47%]`}>
+                <div className={`flex flex-col basis-[60%] md:basis-[47%]`}>
                   <label htmlFor="category" className={`font-bold text-[16px]  my-3`}>
                     Category
                   </label>
@@ -201,13 +201,23 @@ const index = () => {
                   </select>
                 </div>
 
-                <div className={`flex flex-col basis-[47%]`}>
+                <div className={`flex flex-col basis-[30%] md:basis-[47%]`}>
                   <label htmlFor="lastName" className={`font-bold text-[16px]  my-3`}>
                     Group Size <span className={`text-red10`}></span>
                   </label>
-                  <input type="text" placeholder='Select' id='groupSize' name='groupSize' className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required
-                  />
+
+                  <select name="Select" id="groupSize" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required >
+                    <option>
+                      {/* {data.map((name, index) => (
+                        <li key={index}>{name}</li>
+                      ))} */}
+                    </option>
+                  </select>
                 </div>
+              </div>
+
+              <div>
+                <h1 className="text-[#FF26B9] text-[12px] font-extrabold md:text-[16px]">Please review your registration details before submitting</h1>
               </div>
 
 
@@ -222,7 +232,7 @@ const index = () => {
               <div className={` rounded-[5px] flex items-center w-2/3 md:w-full justify-center `}>
                 <button
                   type="submit"
-                  className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-centerw-2/3 md:w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
+                  className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-2/3 md:w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
                   disabled={!isAllFieldsFilled()}>
                   Register Now
                 </button>
