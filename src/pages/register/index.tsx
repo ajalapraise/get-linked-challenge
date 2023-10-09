@@ -22,20 +22,15 @@ interface FormState {
 
 const index = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    address: '',
+    teamName: '',
     phoneNumber: '',
     email: '',
-    password: '',
-    confirmPassword: '',
+    projectTopic: '',
     agreement: false,
-    error: '',
-    idNumber: '',
+    category: '',
+    groupSize: ''
   });
 
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 
   const handleChange = (e: any) => {
@@ -46,43 +41,8 @@ const index = () => {
 
     }));
 
-    if (name === 'password') {
-      const passwordPattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-      if (value && !passwordPattern.test(value)) {
-        setFormData((prevData) => ({
-          ...prevData,
-          error: 'Password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one special character, and one number.',
-        }));
-      } else {
-        // Clear the error message if the password matches the pattern or is empty
-        setFormData((prevData) => ({
-          ...prevData,
-          error: '',
-        }));
-      }
-    }
-
-    if (name === 'confirmPassword') {
-      if (value !== formData.password) {
-        setFormData((prevData) => ({
-          ...prevData,
-          error: 'Password should match',
-        }));
-      } else {
-        // Clear the error message if the confirm password matches the password
-        setFormData((prevData) => ({
-          ...prevData,
-          error: '',
-        }));
-      }
-    }
-
-    // Update the form data with the new password or confirm password value
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
   };
+
 
   const handlePhoneNumberKeyDown = (e: any) => {
     // Check if the pressed key is a number (0-9) or Backspace/Delete key
@@ -99,55 +59,46 @@ const index = () => {
 
 
   const isAllFieldsFilled = () => {
-    const requiredFields: (keyof typeof formData)[] = ['firstName', 'lastName', 'address', 'phoneNumber', 'email', 'password', 'confirmPassword', 'idNumber'];
+    const requiredFields: (keyof typeof formData)[] = ['teamName', 'phoneNumber', 'email', 'projectTopic', 'category', 'groupSize'];
     return requiredFields.every(field => formData[field] !== '') && formData.agreement;
   }
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-  const toggleConfirmPasswordVisibility = () => {
-    setShowConfirmPassword(!showConfirmPassword);
-  };
 
   const onSubmit = async (event: any) => {
     event.preventDefault();
 
 
-    const formattedPhoneNumber = formData.phoneNumber.startsWith("+61") ? formData.phoneNumber : "+61" + formData.phoneNumber;
-
-
     try {
       const user = {
         request: {
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          phoneNumber: formattedPhoneNumber, // Use the formatted phone number here
-          emailAddress: formData.email,
-          password: formData.password,
+          //   firstName: formData.firstName,
+          //   lastName: formData.lastName,
+          //   phoneNumber: formattedPhoneNumber, // Use the formatted phone number here
+          //   emailAddress: formData.email,
+          //   password: formData.password,
         },
-        idNumber: formData.idNumber,
+        // idNumber: formData.idNumber,
       }
 
       const payload = {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        phoneNumber: formattedPhoneNumber, // Use the formatted phone number here
-        emailAddress: formData.email,
-        password: formData.password,
-        idNumber: formData.idNumber,
+        // firstName: formData.firstName,
+        // lastName: formData.lastName,
+        // phoneNumber: formattedPhoneNumber, // Use the formatted phone number here
+        // emailAddress: formData.email,
+        // password: formData.password,
+        // idNumber: formData.idNumber,
 
 
       }
 
       // const res = await serviceProviderSignup(user);
 
-      console.log('Signup payload:', payload);
-      const res = await fetch('https://service-rppp.onrender.com/api/v1/service_provider/sign-up', { method: 'POST', body: JSON.stringify(payload) })
+      //   console.log('Signup payload:', payload);
+      //   const res = await fetch('https://service-rppp.onrender.com/api/v1/service_provider/sign-up', { method: 'POST', body: JSON.stringify(payload) })
 
-      console.log('Signup response:', res);
+      //   console.log('Signup response:', res);
     } catch (error) {
-      console.log('Signup error:', error);
+      //   console.log('Signup error:', error);
     }
 
 
@@ -155,15 +106,17 @@ const index = () => {
 
   return (
     <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
-      <div className={`relative w-full h-[250px] md:w-[500px] md:h-[400px]`}>
-        <Image src={register} fill alt="" />
-
+      <div className=" w-full md:w-2/3 flex justify-center">
+        <div className=" w-full h-[250px]  sm:w-[300px] sm:h-[350px] relative md:w-[400px] md:h-[450px]">
+          <Image src={register} fill alt="" />
+        </div>
       </div>
-      <div>
-        <div className="flex flex-col space-y-8">
+      <div className={`w-full  my-10  md:rounded-md md:bg-[#FFFFFF08]  md:p-16 md:w-[800px] md:flex md:flex-col md:shadow-lg`}>
+        <div className="flex flex-col space-y-5">
+          <h1 className="text-[#D434FE] text-lg mb-5 font-extrabold">Register</h1>
           <div className="flex space-x-5  items-center">
-            <h2 className="font-bold text-sm ">Be part of this movement! </h2>
-            <div className="flex justify-center w-[150px] mt-[-13px] space-x-2 items-center border-b-2 border-[#D434FE] border-dashed">
+            <h2 className="font-bold text-[18px] ">Be part of this movement! </h2>
+            <div className="flex justify-center w-[100px] mt-[-13px] space-x-1 items-center border-b-2 border-[#D434FE] border-dashed">
               <div className={`relative w-[30px] h-[30px]`}>
                 <Image src={ladyWalking} fill alt="" />
               </div>
@@ -174,103 +127,86 @@ const index = () => {
           </div>
 
           <div>
-            <h1 className="font-bold text-xl">CREATE YOUR ACCOUNT</h1>
+            <h1 className="font-bold text-[27px] tracking-wider mb-4">CREATE YOUR ACCOUNT</h1>
           </div>
         </div>
-        <div className='mb-10  w-[500px]'>
+        <div className='md:w-[550px]'>
           <form action="" onSubmit={onSubmit}>
             <div className={`space-y-4 mb-10`}>
               <div className={`flex justify-between`}>
-                <div className={`flex flex-col basis-[48%]`}>
-                  <label htmlFor="firstName" className={`font-extrabold text-[16px]  my-3`}>
-                    First Name <span className={`text-red10`}></span>
+                <div className={`flex flex-col basis-[47%]`}>
+                  <label htmlFor="teamName" className={`font-bold text-[16px]  my-3`}>
+                    Team's Name
                   </label>
-                  <input type="text" placeholder='First name' id='firstName' name='firstName' className={` border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl`} value={formData.firstName} onChange={handleChange} required
+                  <input type="text" placeholder='Enter the name of your group' id='teamName' name='teamName' className={` border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.teamName} onChange={handleChange} required
 
                   />
                 </div>
 
-                <div className={`flex flex-col basis-[48%]`}>
+                <div className={`flex flex-col basis-[47%]`}>
+                  <label htmlFor="phoneNumber" className={`font-bold text-[16px] my-3`}>
+                    Phone
+                  </label>
+                  <input type="tel" placeholder='Enter your phone number' name='phoneNumber' id='phoneNumber' className={`  border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm `} value={formData.phoneNumber} onChange={handleChange} onKeyDown={handlePhoneNumberKeyDown} required maxLength={11} minLength={11}
+                  />
+                </div>
+              </div>
+
+              <div className={`flex justify-between`}>
+                <div className={`flex flex-col basis-[47%]`}>
+                  <label htmlFor="email" className={`font-bold text-[16px] my-3`}>
+                    Email
+                  </label>
+                  <input type="email" placeholder='Enter your email-address' id='email' name='email' className={`  border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.email} onChange={handleChange} required
+                  />
+                </div>
+
+                <div className={`flex flex-col basis-[47%]`}>
+                  <label htmlFor="projectTopic" className={`font-bold text-[16px]  my-3`}>
+                    Project Topic
+                  </label>
+                  <input type="text" placeholder='What is your group project topic' id='projectTopic' name='projectTopic' className={` border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.projectTopic} onChange={handleChange} required
+                  />
+                </div>
+              </div>
+
+              <div className={`flex justify-between`}>
+                <div className={`flex flex-col basis-[47%]`}>
+                  <label htmlFor="category" className={`font-bold text-[16px]  my-3`}>
+                    Category
+                  </label>
+                  <input type="text" placeholder='Select your category' id='category' name='category' className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.category} onChange={handleChange} required
+
+                  />
+                </div>
+
+                <div className={`flex flex-col basis-[47%]`}>
                   <label htmlFor="lastName" className={`font-bold text-[16px]  my-3`}>
-                    Last Name <span className={`text-red10`}></span>
+                    Group Size <span className={`text-red10`}></span>
                   </label>
-                  <input type="text" placeholder='Last name' id='lastName' name='lastName' className={`border-medium border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl`} value={formData.lastName} onChange={handleChange} required
+                  <input type="text" placeholder='Select' id='groupSize' name='groupSize' className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required
                   />
                 </div>
-              </div>
-
-              <div className={`flex flex-col`}>
-                <label htmlFor="address" className={`font-bold text-[16px] my-3`}>
-                  Address <span className={`text-red10`}></span>
-                </label>
-                <input type="text" id='address' name='address' placeholder='Enter your address' className={`border-medium border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl w-full`} value={formData.address} onChange={handleChange} required
-                />
-              </div>
-
-              <div className={`flex flex-col`}>
-                <label htmlFor="phoneNumber" className={`font-bold text-[16px] my-3`}>
-                  Phone Number <span className={`text-red10`}>*</span>
-                </label>
-                <div className={`flex items-center justify-around`}>
-                  <h4 className={`border-medium border-[1px] text-base text-black font-bold p-3 rounded-xl`}>AU +61</h4>
-                  <input type="tel" placeholder='Enter phone number' name='phoneNumber' id='phoneNumber' className={`border-medium border-[1px] text-base text-black font-bold py-3 px-10 tracking-[0.3rem] rounded-xl w-5/6`} value={formData.phoneNumber} onChange={handleChange} onKeyDown={handlePhoneNumberKeyDown} required maxLength={9} minLength={9}
-                  />
-                </div>
-              </div>
-
-              <div className={`flex flex-col`}>
-                <label htmlFor="email" className={`font-bold text-[16px] my-3`}>
-                  Email <span className={`text-red10`}>*</span>
-                </label>
-                <input type="email" placeholder='Enter your email-address' id='email' name='email' className={`border-medium border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl w-full`} value={formData.email} onChange={handleChange} required
-                />
-              </div>
-
-
-              <div className={`text-red10 p-2  my-0 py-0 text-[10px]`}>
-                <p >{formData.error}</p>
-
-              </div>
-
-              <div className={`flex flex-col`}>
-                <label htmlFor="identification" className={`font-bold text-[16px] my-3`}>
-                  MEANS OF IDENTIFICATION <span className={`text-red10`}>*</span>
-                </label>
-                <select name="identification" id="identification" className={`border-medium border-[1px] text-base text-black font-bold py-3 px-3 rounded-xl w-full bg-contain`} >
-                  <option value="none">None</option>
-                  <option value="drivers_license">National Driver&rsquo;s License</option>
-                  <option value="national_id">National ID</option>
-                  <option value="voters_card">Voter&rsquo;s Card</option>
-                  <option value="passport">International Passport</option>
-                </select>
-
-              </div>
-
-              <div className={`flex flex-col`}>
-                <label htmlFor="idNumber" className={`font-bold text-[16px]`}>
-                  Valid ID NUMBER
-                </label>
-                <input type="text" placeholder='Enter the ID number' name='idNumber' id='idNumber' className={`border-medium border-[1px] text-base text-black font-bold py-3 px-5 rounded-xl w-full my-3`} value={formData.idNumber} onChange={handleChange} required
-                />
-
               </div>
 
 
               <div className={`space-x-2`}>
                 <input onChange={handleChange} type="checkbox" name="agreement" id="agreement" required />
-                <label htmlFor="agreement" className={`font-bold text-base`}>I agree to  all <Link href='/termsAndConditions' className={`text-purpleBase text-base hover:underline`}>Terms of service </Link> and <Link href='/privacy' className={`text-purpleBase text-base hover:underline `}> Privacy</Link></label>
+                <label htmlFor="agreement" className={`font-bold text-base`}>I agreed with the event terms and conditions  and privacy policy</label>
               </div>
 
             </div>
 
             <div className={`flex justify-center items-center`}>
-              <button
-                type="submit"
-                className={`w-full bg-purpleBase text-white py-2 px-4 rounded-md hover:bg-purple5  ${isAllFieldsFilled() ? '' : 'cursor-not-allowed opacity-50'}`}
-                disabled={!isAllFieldsFilled()}
-              >
-                Create Account
-              </button>
+              <div className={` rounded-[5px] flex items-center w-full justify-center `}>
+                <button
+                  type="submit"
+                  className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-full h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-not-allowed ${isAllFieldsFilled() ? 'hover:bg-purple1 cursor-pointer' : 'opacity-50'}`}
+                  disabled={!isAllFieldsFilled()}
+                >
+                  Register Now
+                </button>
+              </div>
             </div>
           </form>
         </div>
