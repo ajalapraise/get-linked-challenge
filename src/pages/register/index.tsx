@@ -20,23 +20,23 @@ interface FormState {
 
 const index = () => {
 
-  // useEffect(() => {
-  //   fetch('https://backend.getlinked.ai/hackathon/categories-list')
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       return response.json(); // Get the response as text
-  //     })
-  //     .then((responseData) => {
-  //       const names = responseData.map((category: { name: any; }) => category.name);
-  //       console.log(names); // Log the response data
-  //       // / Now, you can analyze the response and determine its format.
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error fetching data:', error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    //   fetch('https://backend.getlinked.ai/hackathon/categories-list')
+    //     .then((response) => {
+    //       if (!response.ok) {
+    //         throw new Error('Network response was not ok');
+    //       }
+    //       return response.json(); // Get the response as text
+    //     })
+    //     .then((responseData) => {
+    //       const names = responseData.map((category: { name: any; }) => category.name);
+    //       console.log(names); // Log the response data
+    //       // / Now, you can analyze the response and determine its format.
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error fetching data:', error);
+    //     });
+  }, []);
 
 
   const [formData, setFormData] = useState({
