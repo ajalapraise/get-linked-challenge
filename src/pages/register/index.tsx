@@ -19,23 +19,28 @@ interface FormState {
 }
 
 const index = () => {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
-    //   fetch('https://backend.getlinked.ai/hackathon/categories-list')
-    //     .then((response) => {
-    //       if (!response.ok) {
-    //         throw new Error('Network response was not ok');
-    //       }
-    //       return response.json(); // Get the response as text
-    //     })
-    //     .then((responseData) => {
-    //       const names = responseData.map((category: { name: any; }) => category.name);
-    //       console.log(names); // Log the response data
-    //       // / Now, you can analyze the response and determine its format.
-    //     })
-    //     .catch((error) => {
-    //       console.error('Error fetching data:', error);
-    //     });
+    fetch('https://backend.getlinked.ai/hackathon/categories-list')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // Get the response as text
+      })
+      .then((responseData) => {
+        const names = responseData.map((category: { name: any; }) => category.name);
+        console.log(names);
+        setData(names);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setIsLoading(false);
+      });
   }, []);
 
 
@@ -194,12 +199,11 @@ const index = () => {
                   <label htmlFor="category" className={`font-bold text-[16px]  my-3`}>
                     Category
                   </label>
-                  <select name="Select your Category" id="category" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.category} onChange={handleChange} required >
-                    <option>
-                      {/* {data.map((name, index) => (
-                        <li key={index}>{name}</li>
-                      ))} */}
-                    </option>
+                  <select name="category" id="category" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.category} onChange={handleChange} required >
+                    <option value="" disabled hidden>Select your Category</option>
+                    {data.map((name, index) => (
+                      <option key={index} className="bg-purple3 text-[white]">{name}</option>
+                    ))}
                   </select>
                 </div>
 
