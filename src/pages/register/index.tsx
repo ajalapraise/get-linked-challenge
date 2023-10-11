@@ -8,7 +8,6 @@ import ladyWalking from "../../../public/lady-walking.svg";
 import register from "../../../public/register.svg";
 import success from '../../../public/congratulations.svg'
 import winkEmoji from '../../../public/wink-emoji.svg'
-import { Button } from "@/components/Button/Button";
 
 interface FormState {
   teamName: string;
@@ -21,8 +20,14 @@ interface FormState {
 }
 
 const index: React.FC<FormState> = () => {
-  const [data, setData] = useState([]);
+  const [dataNames, setDataNames] = useState([]);
+  const [dataIds, setDataIds] = useState([])
 
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const click = () => {
+    setIsSuccess(!isSuccess);
+  };
 
   useEffect(() => {
     fetch('https://backend.getlinked.ai/hackathon/categories-list')
@@ -34,7 +39,10 @@ const index: React.FC<FormState> = () => {
       })
       .then((responseData) => {
         const names = responseData.map((category: { name: any; }) => category.name);
-        setData(names);
+        const ids = responseData.map((category: { id: any; }) => category.id)
+        console.log(responseData)
+        setDataNames(names);
+        setDataIds(ids)
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
@@ -55,12 +63,19 @@ const index: React.FC<FormState> = () => {
 
 
   const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
+    const { name, value, type, checked } = e.target; if (type === 'checkbox') {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: checked, // Set the checkbox value to true or false
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
 
-    }));
+
+    }
 
   };
 
@@ -92,28 +107,18 @@ const index: React.FC<FormState> = () => {
 
     try {
       const user = {
-        //   firstName: formData.firstName,
-        //   lastName: formData.lastName,
-        //   phoneNumber: formattedPhoneNumber, // Use the formatted phone number here
-        //   emailAddress: formData.email,
-        //   password: formData.password,
-        // idNumber: formData.idNumber,
-      }
-
-      const payload = {
-        // firstName: formData.firstName,
-        // lastName: formData.lastName,
-        // phoneNumber: formattedPhoneNumber, // Use the formatted phone number here
-        // emailAddress: formData.email,
-        // password: formData.password,
-        // idNumber: formData.idNumber,
-
+        email: formData.email,
+        phone_number: formData.phoneNumber,
+        team_name: formData.teamName,
+        group_size: formData.groupSize,
+        project_topic: formData.projectTopic,
+        category: dataIds,
+        privacy_poclicy_accepted: formData.agreement
 
       }
 
-      // const res = await serviceProviderSignup(user);
 
-      //   console.log('Signup payload:', payload);
+      console.log('Signup payload:', user);
       //   const res = await fetch('https://service-rppp.onrender.com/api/v1/service_provider/sign-up', { method: 'POST', body: JSON.stringify(payload) })
 
       //   console.log('Signup response:', res);
@@ -200,7 +205,7 @@ const index: React.FC<FormState> = () => {
                     </label>
                     <select name="category" id="category" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.category} onChange={handleChange} required >
                       <option value="" disabled hidden>Select your Category</option>
-                      {data.map((name, index) => (
+                      {dataNames.map((name, index) => (
                         <option key={index} className="bg-purple3 text-[white]">{name}</option>
                       ))}
                     </select>
@@ -260,7 +265,7 @@ const index: React.FC<FormState> = () => {
           </div>
         </div>
       </div>
-      <div className="p-2 flex flex-col w-3/4 h-[500px] md:w-[550px] justify-center border-[1px] border-[#D434FE] absolute space-y-10">
+      <div className="p-2 hidden flex-col w-3/4 h-[500px] md:w-[550px] justify-center border-[1px] border-[#D434FE] absolute space-y-10">
         <div className="relative w-[250px] flex justify-center items-center h-[100px]">
           <Image src={success} fill alt="" />
         </div>
