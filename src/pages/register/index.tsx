@@ -208,17 +208,12 @@ const index = () => {
                 </div>
 
                 <div className={`flex flex-col basis-[35%] md:basis-[47%]`}>
-                  <label htmlFor="lastName" className={`font-bold text-[16px]  my-3`}>
+                  <label htmlFor="groupSize" className={`font-bold text-[16px]  my-3`}>
                     Group Size <span className={`text-red10`}></span>
                   </label>
 
-                  <select name="Select" id="groupSize" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required >
-                    <option>
-                      {/* {data.map((name, index) => (
-                        <li key={index}>{name}</li>
-                      ))} */}
-                    </option>
-                  </select>
+                  <input type="number" placeholder='Select' id='' name='groupSize' className={` border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required min={1} max={10} />
+
                 </div>
               </div>
 
