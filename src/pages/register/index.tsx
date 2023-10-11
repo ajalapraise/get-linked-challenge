@@ -207,13 +207,24 @@ const index = () => {
                   </select>
                 </div>
 
-                <div className={`flex flex-col basis-[35%] md:basis-[47%]`}>
+                <div className={`flex flex-col basis-[30%] md:basis-[47%]`}>
                   <label htmlFor="groupSize" className={`font-bold text-[16px]  my-3`}>
                     Group Size <span className={`text-red10`}></span>
                   </label>
 
-                  <input type="number" placeholder='Select' id='' name='groupSize' className={` border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required min={1} max={10} />
-
+                  <select name="Select" id="groupSize" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required >
+                    <option value="" disabled hidden>Select</option>
+                    <option className="bg-purple3 text-[white]">1</option>
+                    <option className="bg-purple3 text-[white]">2</option>
+                    <option className="bg-purple3 text-[white]">3</option>
+                    <option className="bg-purple3 text-[white]">4</option>
+                    <option className="bg-purple3 text-[white]">5</option>
+                    <option className="bg-purple3 text-[white]">6</option>
+                    <option className="bg-purple3 text-[white]">7</option>
+                    <option className="bg-purple3 text-[white]">8</option>
+                    <option className="bg-purple3 text-[white]">9</option>
+                    <option className="bg-purple3 text-[white]">10</option>
+                  </select>
                 </div>
               </div>
 
