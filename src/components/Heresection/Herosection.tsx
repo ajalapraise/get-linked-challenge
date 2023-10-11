@@ -83,7 +83,7 @@ const Herosection = () => {
                         </p>
                     </div>
                     <div className={`flex  justify-center md:justify-start items-center md:w-[150px] `}>
-                        <Link href="/auth">
+                        <Link href="/register">
                             <Button btnValue="Register" />
                         </Link>
                     </div>
