@@ -212,7 +212,7 @@ const index = () => {
                     Group Size <span className={`text-red10`}></span>
                   </label>
 
-                  <select name="Select" id="groupSize" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required >
+                  <select name="groupSize" id="groupSize" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.groupSize} onChange={handleChange} required >
                     <option value="" disabled hidden>Select</option>
                     <option className="bg-purple3 text-[white]">1</option>
                     <option className="bg-purple3 text-[white]">2</option>
