@@ -20,7 +20,6 @@ interface FormState {
 
 const index = () => {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
 
   useEffect(() => {
@@ -33,13 +32,10 @@ const index = () => {
       })
       .then((responseData) => {
         const names = responseData.map((category: { name: any; }) => category.name);
-        console.log(names);
         setData(names);
-        setIsLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
-        setIsLoading(false);
       });
   }, []);
 
@@ -194,7 +190,7 @@ const index = () => {
                 </div>
               </div>
 
-              <div className={`flex justify-between`}>
+              <div className={`flex justify-between space-x-5`}>
                 <div className={`flex flex-col basis-[50%] md:basis-[47%]`}>
                   <label htmlFor="category" className={`font-bold text-[16px]  my-3`}>
                     Category
