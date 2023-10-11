@@ -224,6 +224,13 @@ const index = () => {
                     <option className="bg-purple3 text-[white]">8</option>
                     <option className="bg-purple3 text-[white]">9</option>
                     <option className="bg-purple3 text-[white]">10</option>
+                    <option className="bg-purple3 text-[white]">11</option>
+                    <option className="bg-purple3 text-[white]">12</option>
+                    <option className="bg-purple3 text-[white]">13</option>
+                    <option className="bg-purple3 text-[white]">14</option>
+                    <option className="bg-purple3 text-[white]">15</option>
+
+
                   </select>
                 </div>
               </div>
