@@ -15,7 +15,7 @@ interface FormState {
   email: string
   projectTopic: string;
   agreement: boolean,
-  category: string;
+  category: number;
   groupSize: number;
 }
 
@@ -40,7 +40,6 @@ const index: React.FC<FormState> = () => {
       .then((responseData) => {
         const names = responseData.map((category: { name: any; }) => category.name);
         const ids = responseData.map((category: { id: any; }) => category.id)
-        console.log(responseData)
         setDataNames(names);
         setDataIds(ids)
       })
@@ -56,8 +55,8 @@ const index: React.FC<FormState> = () => {
     email: '',
     projectTopic: '',
     agreement: false,
-    category: '',
-    groupSize: ''
+    category: 1,
+    groupSize: 1
   });
 
 
@@ -112,18 +111,18 @@ const index: React.FC<FormState> = () => {
         team_name: formData.teamName,
         group_size: formData.groupSize,
         project_topic: formData.projectTopic,
-        category: dataIds,
+        category: formData.category,
         privacy_poclicy_accepted: formData.agreement
 
       }
 
 
-      console.log('Signup payload:', user);
-      //   const res = await fetch('https://service-rppp.onrender.com/api/v1/service_provider/sign-up', { method: 'POST', body: JSON.stringify(payload) })
+      // console.log('Signup payload:', user);
+      const res = await fetch('https://backend.getlinked.ai/hackathon/registration', { method: 'POST', body: JSON.stringify(user) })
 
-      //   console.log('Signup response:', res);
+      console.log('Signup response:', res);
     } catch (error) {
-      //   console.log('Signup error:', error);
+      console.log('Signup error:', error);
     }
 
 
@@ -206,7 +205,7 @@ const index: React.FC<FormState> = () => {
                     <select name="category" id="category" className={`border-[1px] border-[white] bg-transparent text-base text-[white] font-bold p-3 rounded-sm`} value={formData.category} onChange={handleChange} required >
                       <option value="" disabled hidden>Select your Category</option>
                       {dataNames.map((name, index) => (
-                        <option key={index} className="bg-purple3 text-[white]">{name}</option>
+                        <option key={index} value={dataIds[index]} className="bg-purple3 text-[white]">{name}</option>
                       ))}
                     </select>
                   </div>
