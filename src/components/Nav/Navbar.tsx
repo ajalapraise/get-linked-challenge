@@ -47,21 +47,21 @@ const Navbar = () => {
           </div>
           <div className={`flex flex-col item-center space-y-4 relaive font-bold  md:flex-row md:space-x-12  md:space-y-0 `}>
             <Link
-              href="#"
+              href={`${isNavOpen ? "/#timeline" : "/#timeline2"}`}
               className={`hover:text-purple2  ${isLinkActive("/timeline") ? "text-purple2" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Timeline
             </Link>
             <Link
-              href="#"
+              href="/#intro"
               className={`hover:text-purple2 ${isLinkActive("/overview") ? "text-purple2" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Overview
             </Link>
             <Link
-              href="#"
+              href="/#faq"
               className={`hover:text-purple2 ${isLinkActive("/faqs") ? "text-purple2" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >

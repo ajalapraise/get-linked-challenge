@@ -29,7 +29,7 @@ import check from '../../../public/landingPage/check.svg'
 
 export const Intro = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-around items-center`}>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-around items-center`} id='intro'>
             <div className='w-full flex justify-center items-center md:items-start md:justify-start md:w-1/2'>
                 <Image src={introImg} width={450} alt="" />
             </div>
@@ -134,7 +134,7 @@ export const Criteria = () => {
 
 export const FAQ = () => {
     return (
-        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-20 md:py-10 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`}>
+        <div className={`border-b-[1px] p-10 space-x-5 border-[#FFFFFF2E] md:space-x-10 md:px-20 md:py-10 flex flex-col md:flex-row space-y-10 md:space-y-0 justify-evenly items-center`} id='faq'>
             <div className={`flex justify-center w-[500px] md:py-20 flex-col  text-white`}>
                 <div className={`my-2 flex flex-col items-center space-y-4 mb-5 justify-center  md:items-start md:space-y-7 md:mb-10   `}>
                     <h1 className={`text-base flex text-center flex-col items-center md:items-start justify-center md:text-[27px] font-[100] ${revalia.className}`}>
@@ -175,7 +175,7 @@ export const FAQ = () => {
 export const SmTimeline = () => {
     return (
         <div className='md:hidden'>
-            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-5 py-8 flex flex-col items-center space-y-5 relative `}>
+            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-5 py-8 flex flex-col items-center space-y-5 relative `} id='timeline'>
                 <div className={`mb-2 flex items-center space-y-5 flex-col text-center`}>
                     <h1 className={`text-base  font-extrabold ${revalia.className}`}>Timeline</h1>
                     <h4 className={`w-full text-[10px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>
@@ -318,7 +318,7 @@ export const SmTimeline = () => {
 export const MdTimeline = () => {
     return (
         <div className='hidden md:flex w-full'>
-            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-20 py-10 flex flex-col w-full  space-y-10 relative `}>
+            <div className={`border-b-[1px] border-[#FFFFFF2E]  px-20 py-10 flex flex-col w-full  space-y-10 relative `} id='timeline2'>
                 <div className={`mb-10 flex items-center space-y-5 flex-col text-center`}>
                     <h1 className={`text-xl  font-extrabold ${revalia.className}`}>Timeline</h1>
                     <h4 className={`w-[400px] font-extrabold`}>Here is the breakdown of the time we anticipate using for the upcoming event.</h4>

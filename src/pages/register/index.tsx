@@ -118,7 +118,7 @@ const index: React.FC<FormState> = () => {
 
 
       // console.log('Signup payload:', user);
-      const res = await fetch('https://backend.getlinked.ai/hackathon/registration', { method: 'POST', body: JSON.stringify(user) })
+      const res = await fetch('https://backend.getlinked.ai/hackathon/registration', { method: 'POST', body: JSON.stringify(user), headers: { "Content-Type": "application/json" } })
 
       console.log('Signup response:', res);
     } catch (error) {
