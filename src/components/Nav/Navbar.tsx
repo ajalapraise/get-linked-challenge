@@ -6,6 +6,7 @@ import { revalia } from "@/styles/font";
 import { Button } from "@/components/Button/Button";
 import navBtn from "../../../public/navButton.svg";
 import cancelBtn from "../../../public/cancelBtn.svg";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter();
@@ -75,9 +76,17 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
+
           <div className={`flex  items-center  my-4`} onClick={closeNav}>
-            <Link href="/register">
-              <Button btnValue="Register" />
+            <Link
+              href="/register" className={`w-[100px] flex justify-center items-center h-[35px] md:w-[120px] md:h-[45px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] `}>
+              <div className={` flex justify-center items-center rounded-[5px] font-bold text-[white] py-1 px-2  ${isLinkActive('/register') ? "bg-purple3  w-[100px] h-[30px] md:w-[118px] md:h-[43px] hover:text[13px] hover:md:text-[17px]" : "hover:bg-purple1 w-full h-full text-[12px] md:text-[16px] "}`}>
+                <input
+                  type="button"
+                  value='Register'
+                  className={` w-full h-full cursor-pointer  `}
+                />
+              </div>
             </Link>
           </div>
         </div>
