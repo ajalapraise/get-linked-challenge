@@ -47,7 +47,7 @@ const Herosection = () => {
     };
 
     return (
-        <div className={`  justify-evenly relative items-center px-2 md:px-20 pt-6 md:pt-3 border-b-[1px] border-[#FFFFFF2E] w-full`}>
+        <div className={`  justify-evenly relative mt-16 md:mt-24 items-center px-2 md:px-20 pt-6 md:pt-3 border-b-[1px] border-[#FFFFFF2E] w-full`}>
             <div className="flex items-center justify-center md:relative">
                 <div className="mt-[-3.5rem] mb-8 md:w-full flex items-center justify-center md:flex md:justify-end md:absolute md:right-0">
                     <h2 className={`text-base  mt-14 md:mt-32 text-center sm:text-[30px] font-bold relative`}>Igniting a Revolution in HR innovation

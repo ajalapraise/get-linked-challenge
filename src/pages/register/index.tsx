@@ -129,7 +129,7 @@ const index: React.FC<FormState> = () => {
   }
 
   return (
-    <div className="flex justify-center items-center flex-col relative">
+    <div className="flex justify-center mt-16 md:mt-24 items-center flex-col relative">
       <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
         <div className=" w-full md:w-2/3 flex flex-col md:flex-row justify-start">
           <h1 className="text-[#D434FE] md:hidden mb-5 flex text-lg  font-extrabold">Register</h1>
@@ -160,7 +160,7 @@ const index: React.FC<FormState> = () => {
           <div className='w-full'>
             <form action="" onSubmit={onSubmit}>
               <div className={`space-y-4 mb-10`}>
-                <div className={`flex flex-col md:flex-row justify-between space-y-4`}>
+                <div className={`flex flex-col md:flex-row justify-between `}>
                   <div className={`flex flex-col md:basis-[47%]`}>
                     <label htmlFor="teamName" className={`font-bold text-base md:text-[16px]  my-3`}>
                       Team's Name
@@ -179,7 +179,7 @@ const index: React.FC<FormState> = () => {
                   </div>
                 </div>
 
-                <div className={`flex flex-col md:flex-row justify-between space-y-4`}>
+                <div className={`flex flex-col md:flex-row justify-between`}>
                   <div className={`flex flex-col md:basis-[47%]`}>
                     <label htmlFor="email" className={`font-bold text-base md:text-[16px] my-3`}>
                       Email
@@ -243,7 +243,7 @@ const index: React.FC<FormState> = () => {
                 </div>
 
 
-                <div className={`space-x-2`}>
+                <div className={`space-x-2 h-[10px] flex items-center`}>
                   <input onChange={handleChange} type="checkbox" name="agreement" id="agreement" required />
                   <label htmlFor="agreement" className={`font-bold text-base`}>I agreed with the event terms and conditions  and privacy policy</label>
                 </div>

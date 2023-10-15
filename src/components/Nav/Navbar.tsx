@@ -25,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-purple3 border-b-[1px] border-[#FFFFFF2E] w-full font-extrabold text-[white] p-1">
+    <div className="bg-purple3 border-b-[1px] border-[#FFFFFF2E] w-full font-extrabold text-[white] fixed z-50 p-1">
       <div className={`flex   px-10  ${isNavOpen ? " min-h-screen justify-start items-start mt-8" : "min-h-[60px] md:min-h-[90px] items-center justify-between"} md:px-20 relative  z-[9999]`}>
         <div className="w-2/5 flex justify-left items-center `">
           <Link href="/" className={`flex items-center ${revalia.className}`} onClick={closeNav}>
@@ -80,7 +80,7 @@ const Navbar = () => {
           <div className={`flex  items-center  my-4`} onClick={closeNav}>
             <Link
               href="/register" className={`w-[100px] flex justify-center items-center h-[35px] md:w-[120px] md:h-[45px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-[5px] `}>
-              <div className={` flex justify-center items-center rounded-[5px] font-bold text-[white] py-1 px-2  ${isLinkActive('/register') ? "bg-purple3  w-[100px] h-[30px] md:w-[118px] md:h-[43px] hover:text[13px] hover:md:text-[17px]" : "hover:bg-purple1 w-full h-full text-[12px] md:text-[16px] "}`}>
+              <div className={` flex justify-center items-center rounded-[5px] font-bold text-[white] py-1 px-2  ${isLinkActive('/register') ? "bg-purple3  w-[99px] h-[34px] md:w-[118px] md:h-[43px] hover:text[13px] hover:md:text-[17px]" : "hover:bg-purple1 w-full h-full text-[12px] md:text-[16px] "}`}>
                 <input
                   type="button"
                   value='Register'
