@@ -130,7 +130,7 @@ const index: React.FC<FormState> = () => {
 
   return (
     <div className="flex justify-center mt-16 md:mt-24 items-center flex-col relative">
-      <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-between items-center`}>
+      <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-14 flex flex-col md:flex-row justify-between items-center opacity-5`}>
         <div className=" w-full md:w-2/3 flex flex-col md:flex-row justify-start">
           <h1 className="text-[#D434FE] md:hidden mb-5 flex text-lg  font-extrabold">Register</h1>
 
@@ -264,17 +264,19 @@ const index: React.FC<FormState> = () => {
           </div>
         </div>
       </div>
-      <div className="p-2 hidden flex-col w-3/4 h-[500px] md:w-[550px] justify-center border-[1px] border-[#D434FE] absolute space-y-10">
-        <div className="relative w-[250px] flex justify-center items-center h-[100px]">
-          <Image src={success} fill alt="" />
+      <div className="p-5  opacity-100  flex-col w-3/4 h-[500px] md:w-[550px] md:h-[450px] justify-center items-center border-[1px] border-[#D434FE] absolute  top-auto space-y-5">
+        <div className="flex items-center justify-center">
+          <div className="relative w-[300px] flex justify-center items-center h-[150px]">
+            <Image src={success} fill alt="" />
+          </div>
         </div>
-        <div className="flex flex-col space-y-10">
-          <div className="text-center text-sm font-extrabold">
+        <div className="flex flex-col space-y-2">
+          <div className="text-center text-lg font-extrabold">
             <h1>Congratulations  </h1>
             <h1>You have successfully Registered!</h1>
           </div>
 
-          <div className="flex flex-col text-center text-[16px] font-extrabold">
+          <div className="flex flex-col text-center justify-center items-center text-[12px] font-extrabold">
             <h3>Yes, it was easy and you did it! </h3>
             <div className="flex">
               <h3>check your mail box for next step</h3>
@@ -287,10 +289,10 @@ const index: React.FC<FormState> = () => {
 
 
         <div className={`flex justify-center items-center`}>
-          <div className={` rounded-[5px] flex items-center w-2/3 md:w-full justify-center `}>
+          <div className={` rounded-[5px] flex items-center w-2/3 md:w-full justify-center  hover:bg-purple3 `}>
             <button
               type="submit"
-              className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-pointer hover:bg-purple1`}>
+              className={` text-[16px] text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-pointer hover:bg-purple1`}>
               Back
             </button>
           </div>

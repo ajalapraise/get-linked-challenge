@@ -61,22 +61,23 @@ const contact: React.FC<FormState> = () => {
     const onSubmit = async (event: { preventDefault: () => void }) => {
         event.preventDefault();
 
-        // console.log("formdata", formData);
-        // const result = await signIn("credentials", {
-        //     redirect: false,
-        //     email: formData.email,
-        //     password: formData.password,
-        //     callbackUrl: "/dashboard/customer",
-        // });
-        // console.log("result", result);
-        // console.log("session", session);
-        // if (result && result.ok) {
-        //     alert("Login Successful");
-        //     // router.push("/dashboard/customer");
+        try {
+            const message = {
+                email: formData.email,
+                phone_number: formData.phoneNumber,
+                first_name: formData.firstName,
+                message: formData.message
 
-        // } else {
-        //     alert("Login Failed");
-        // }
+            }
+
+
+            // console.log('Signup payload:', user);
+            const messageRes = await fetch('https://backend.getlinked.ai/hackathon/contact-form', { method: 'POST', body: JSON.stringify(message), headers: { "Content-Type": "application/json" } })
+
+            console.log('Message:', messageRes);
+        } catch (error) {
+            console.log('Message:', error);
+        }
     };
     return (
         <div className={`  justify-evenly relative mt-16 md:mt-24 items-center px-10 md:px-20 py-10 md:py-20 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
