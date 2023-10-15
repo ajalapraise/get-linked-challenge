@@ -37,6 +37,9 @@ const config: Config = {
         // Revalia: ["revalia", ...defaultTheme.fontFamily.sans],
         // sans: ["var(--Poppins)"],
       },
+      gradientText: {
+        gradient: "background-image: linear-gradient(to right, #903AFF, #FE34B9); -webkit-background-clip: text; color: transparent;",
+      },
     },
   },
   plugins: [],

@@ -13,3 +13,8 @@
     scroll-behavior: smooth;
   }
 }
+.gradient-text {
+  background-image: linear-gradient(to right, #903AFF, #FE34B9);
+  -webkit-background-clip: text;
+  color: transparent;
+}

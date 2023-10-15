@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   const isLinkActive = (linkPath: string) => {
-    return router.pathname === linkPath;
+    return router.asPath === linkPath;
   };
 
 
@@ -41,7 +41,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className={`bg-purple3 flex  ${isNavOpen ? " flex-col w-[300px]  space-y-5 text-base   md:text-sm my-10  absolute right-0" : "hidden md:flex md:items-center md:space-x-10 lg:space-x-20   "}`}>
+        <div className={`bg-purple3 flex  ${isNavOpen ? " flex-col w-[300px]  space-y-5 text-base justify-start  md:text-sm my-10  absolute left-auto" : "hidden md:flex md:items-center md:space-x-10 lg:space-x-20   "}`}>
           <div className={`w-2/3   ${isNavOpen ? " flex items-end justify-end absolute right-5 mt-[-35px]" : " hidden"}`}>
             <button className="rounded-full  w-[15px] relative  h-[15px]" onClick={toggleNav}>
               <Image src={cancelBtn} fill alt="" />
@@ -49,29 +49,36 @@ const Navbar = () => {
           </div>
           <div className={`flex flex-col item-center space-y-4 relaive font-bold  md:flex-row md:space-x-12  md:space-y-0 `}>
             <Link
-              href={`${isNavOpen ? "/#timeline" : "/#timeline2"}`}
-              className={`hover:text-purple2  ${isLinkActive("/timeline") ? "text-purple2" : ""}`}
+              href='/#timeline'
+              className={`hover:text-purple2 md:hidden ${isLinkActive("/#timeline") ? "gradient-text" : ""} `}
+              onClick={closeNav} // Close the navigation menu when link is clicked
+            >
+              Timeline
+            </Link>
+            <Link
+              href='/#timeline2'
+              className={`hover:text-purple2 hidden md:flex ${isLinkActive("/#timeline2") ? "gradient-text" : ""} `}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Timeline
             </Link>
             <Link
               href="/#intro"
-              className={`hover:text-purple2 ${isLinkActive("/overview") ? "text-purple2" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/#intro") ? "gradient-text" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Overview
             </Link>
             <Link
               href="/#faq"
-              className={`hover:text-purple2 ${isLinkActive("/faqs") ? "text-purple2" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/#faq") ? "gradient-text" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               FAQs
             </Link>
             <Link
               href="contact-us"
-              className={`hover:text-purple2 ${isLinkActive("/contact-us") ? "text-purple2" : ""}`}
+              className={`hover:text-purple2 ${isLinkActive("/contact-us") ? "gradient-text" : ""}`}
               onClick={closeNav} // Close the navigation menu when link is clicked
             >
               Contact
