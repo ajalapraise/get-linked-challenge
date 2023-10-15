@@ -24,6 +24,7 @@ const Navbar = () => {
     return router.pathname === linkPath;
   };
 
+
   return (
     <div className="bg-purple3 border-b-[1px] border-[#FFFFFF2E] w-full font-extrabold text-[white] fixed z-50 p-1">
       <div className={`flex   px-10  ${isNavOpen ? " min-h-screen justify-start items-start mt-8" : "min-h-[60px] md:min-h-[90px] items-center justify-between"} md:px-20 relative  z-[9999]`}>
