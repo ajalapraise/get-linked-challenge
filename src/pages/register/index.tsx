@@ -289,10 +289,10 @@ const index: React.FC<FormState> = () => {
 
 
         <div className={`flex justify-center items-center`}>
-          <div className={` rounded-[5px] flex items-center w-2/3 md:w-full justify-center  hover:bg-purple3 `}>
+          <div className={` rounded-[5px] flex items-center w-2/3 md:w-full justify-center `}>
             <button
               type="submit"
-              className={` text-[16px] text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-pointer hover:bg-purple1`}>
+              className={` text-[16px]   text-[white] font-extrabold  rounded-[5px] py-1 px-2 text-center justify-center w-full  h-[50px] bg-gradient-to-r from-[#903AFF] to-[#FE34B9] items-center cursor-pointer hover:bg-purple1`}>
               Back
             </button>
           </div>
