@@ -10,8 +10,10 @@ import linkedin from "../../public/linkedin.svg";
 import { IoIosArrowBack } from 'react-icons/io'
 import { revalia } from "@/styles/font";
 
-// import { useSession } from "next-auth/react";
-// import router from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 interface FormState {
     firstName: string;
@@ -21,6 +23,8 @@ interface FormState {
 }
 
 const contact: React.FC<FormState> = () => {
+    const [submit, setSubmit] = useState("Submit");
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         firstName: "",
         phoneNumber: "",
@@ -66,19 +70,48 @@ const contact: React.FC<FormState> = () => {
                 email: formData.email,
                 phone_number: formData.phoneNumber,
                 first_name: formData.firstName,
-                message: formData.message
+                message: formData.message,
+            };
 
+            setSubmit("Submitting...");
+            const response = await fetch(
+                "https://backend.getlinked.ai/hackathon/contact-form", // Make sure the URL is correct
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json", // Correct the typo here
+                    },
+                    body: JSON.stringify(message),
+                }
+            );
+
+            if (response.ok) {
+                setErrorMessage(null);
+                toast.success("Message sent successfully!", {
+                    position: toast.POSITION.TOP_RIGHT,
+                });
+                setFormData({
+                    firstName: "",
+                    phoneNumber: "", // Fix the field name here
+                    email: "",
+                    message: "",
+                });
+            } else {
+                toast.error("Error sending message!", {
+                    position: toast.POSITION.TOP_RIGHT,
+                });
+                setErrorMessage("Error sending message!");
             }
-
-
-            // console.log('Signup payload:', user);
-            const messageRes = await fetch('https://backend.getlinked.ai/hackathon/contact-form', { method: 'POST', body: JSON.stringify(message), headers: { "Content-Type": "application/json" } })
-
-            console.log('Message:', messageRes);
         } catch (error) {
-            console.log('Message:', error);
+            toast.error("Error sending message, check your network connection!", {
+                position: toast.POSITION.TOP_RIGHT,
+            });
+            setErrorMessage("Error sending message, check your network connection!");
+        } finally {
+            setSubmit("Submit");
         }
     };
+
     return (
         <div className={`  justify-evenly relative mt-16 md:mt-24 items-center px-10 md:px-20 py-10 md:py-20 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
             <div className="w-full md:p-5  md:h-[670px] justify-center items-center ">

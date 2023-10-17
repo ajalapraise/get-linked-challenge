@@ -27,7 +27,7 @@ const index: React.FC<FormState> = () => {
   const [dataNames, setDataNames] = useState([]);
   const [dataIds, setDataIds] = useState([])
   const [register, setRegister] = useState("Register Now");
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
 
@@ -127,23 +127,27 @@ const index: React.FC<FormState> = () => {
 
       if (response.ok) {
         setErrorMessage(null);
-        toast.success("Registration successful", {
+        const successMessage = "Registration successful";
+        toast.success(successMessage, {
           position: toast.POSITION.TOP_RIGHT,
         });
         setSuccess(true);
       } else {
-        let errorMessage = "An error occurred, check your credentials and try again.";
-      }
-    } catch (err) {
-      let errorMessage = "An error occurred, check your network connection and try again.";
-      // console.log(err.message);
-    } finally {
-      setErrorMessage(errorMessage);
-      if (errorMessage) {
+        const errorMessage = "An error occurred, check your credentials and try again.";
+        setErrorMessage(errorMessage);
         toast.error(errorMessage, {
           position: toast.POSITION.TOP_RIGHT,
         });
       }
+    } catch (err) {
+      const errorMessage =
+        "An error occurred, check your network connection and try again.";
+      setErrorMessage(errorMessage);
+      toast.error(errorMessage, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      // console.log(err.message);
+    } finally {
       setRegister("Register Now");
     }
 
