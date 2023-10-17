@@ -296,7 +296,7 @@ const index: React.FC<FormState> = () => {
         </div>
       </div>
       {success && (
-        <div className="p-5  opacity-100   flex-col w-5/6 h-[700px] md:w-[550px] md:h-[450px] justify-center items-center border-[1px] border-[#D434FE] absolute top-16 md:top-auto space-y-3 md:space-y-5">
+        <div className="p-5  opacity-100   flex-col w-5/6 h-[700px] md:w-[550px] md:h-[450px] justify-center items-center border-[1px] border-[#D434FE] absolute top-auto space-y-3 md:space-y-5">
           <div className="flex items-center justify-center">
             <div className="relative w-[350px] h-[350px] md:w-[300px] flex justify-center items-center md:h-[150px]">
               <Image src={successImg} fill alt="" />
