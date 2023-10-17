@@ -26,7 +26,6 @@ interface FormState {
 const index: React.FC<FormState> = () => {
   const [dataNames, setDataNames] = useState([]);
   const [dataIds, setDataIds] = useState([])
-  const [loadingCategory, setLoadingCategory] = useState(false);
   const [register, setRegister] = useState("Register Now");
   const [errorMessage, setErrorMessage] = useState(null);
   const [success, setSuccess] = useState(false);
