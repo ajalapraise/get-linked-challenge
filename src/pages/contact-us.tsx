@@ -114,6 +114,7 @@ const contact: React.FC<FormState> = () => {
 
     return (
         <div className={`  justify-evenly relative mt-16 md:mt-24 items-center px-10 md:px-20 py-10 md:py-20 border-b-[1px] min-h-screen border-[#FFFFFF2E] w-full`}>
+            <ToastContainer />
             <div className="w-full md:p-5  md:h-[670px] justify-center items-center ">
                 <div className={`md:p-3 p-2 flex flex-col md:justify-between md:items-center  md:flex-row-reverse  md:w-full `}>
                     <div className={`bg-gradient-to-r from-[#903AFF] to-[#FE34B9] rounded-full w-[30px] h-[30px] flex justify-center items-center   mb-12 md:hidden`}>
