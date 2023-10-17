@@ -277,9 +277,9 @@ const index: React.FC<FormState> = () => {
                   </div>
 
 
-                  <div className={`space-x-2 h-[10px] flex items-center`}>
-                    <input onChange={handleChange} type="checkbox" name="agreement" id="agreement" required />
-                    <label htmlFor="agreement" className={`font-bold text-base`}>I agreed with the event terms and conditions  and privacy policy</label>
+                  <div className={`space-x-2 h-[10px] flex items-start `}>
+                    <input onChange={handleChange} type="checkbox" name="agreement" id="agreement" required className="mt-1y" />
+                    <label htmlFor="agreement" className={`font-bold  text-base`}>I agreed with the event terms and conditions  and privacy policy</label>
                   </div>
 
                 </div>
