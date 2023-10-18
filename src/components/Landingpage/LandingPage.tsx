@@ -25,6 +25,16 @@ import VizualPlus from '../../../public/landingPage/Vizual-Plus.svg'
 import privacy from '../../../public/landingPage/privacy.png'
 import check from '../../../public/landingPage/check.svg'
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+    force3D: true
+
+})
+
+
 
 
 export const Intro = () => {
