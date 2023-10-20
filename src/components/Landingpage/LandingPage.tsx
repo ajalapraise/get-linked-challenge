@@ -538,9 +538,28 @@ export const MdTimeline = () => {
 }
 
 export const Prizes = () => {
+    useEffect(() => {
+        const main = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#prizes',
+                start: 'top 70%',
+                // end: 'bottom 60%',
+                toggleActions: "play none none reverse",
+            }
+        });
+
+        main.fromTo(".prize", { duration: 1, opacity: 0, scale: 0.3, ease: "bounce.out", x: 400, delay: .5 }, { duration: 1.5, opacity: 1, scale: 1, ease: "back", x: 0, delay: .2 });
+
+        main.fromTo(".bronze", { duration: 1, opacity: 0, scale: 0.3, ease: "bounce.out", y: -200, rotate: 90, delay: .5 }, { opacity: 1, scale: 1, ease: "back", y: 0, rotate: 0, delay: .5, });
+
+        main.fromTo(".silver", { duration: 1, opacity: 0, scale: 0.3, ease: "bounce.out", y: -300, rotate: 90, delay: .5 }, { opacity: 1, scale: 1, ease: "back.out", y: 0, rotate: 0, delay: .5, });
+
+        main.fromTo(".gold", { duration: 2.5, opacity: 0, scale: 0.3, ease: "bounce.out", y: -400, rotate: 90, delay: .5 }, { duration: 1.5, opacity: 1, scale: 1, ease: "bounce.inOut", y: 0, rotate: 0, delay: .1, });
+
+    }, []);
     return (
-        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-10 flex flex-col md:flex-row justify-evenly items-center`}>
-            <div className='hidden md:flex md:w-1/3'>
+        <div className={`border-b-[1px] p-10 space-y-5 border-[#FFFFFF2E] md:space-y-10 md:px-20 md:py-10 flex flex-col md:flex-row justify-evenly items-center`} id='prizes'>
+            <div className='hidden md:flex md:w-1/3 prize'>
                 <Image src={prize} width={400} alt="" />
             </div>
             <div className='w-full md:w-3/5 space-y-5'>
@@ -553,13 +572,13 @@ export const Prizes = () => {
                 </div>
                 <div className='flex items-center justify-center md:w-[700px]'>
                     <div className='flex items-center justify-center'>
-                        <div className='relative w-[55px] h-[95px] md:w-[145px] md:h-[260px]' >
+                        <div className='relative w-[55px] h-[95px] md:w-[145px] silver md:h-[260px]' >
                             <Image src={silver} fill alt="" />
                         </div >
-                        <div className='relative w-[80px] h-[130px] md:w-[220px] md:h-[360px]'>
+                        <div className='relative w-[80px] h-[130px] md:w-[220px] gold md:h-[360px]'>
                             <Image src={gold} fill alt="" />
                         </div>
-                        <div className='relative w-[55px] h-[85px] md:w-[145px] md:h-[240px]'>
+                        <div className='relative w-[55px] h-[85px] md:w-[145px] bronze md:h-[240px]'>
                             <Image src={bronze} fill alt="" />
                         </div>
                     </div>
