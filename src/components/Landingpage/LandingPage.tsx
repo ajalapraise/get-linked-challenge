@@ -656,8 +656,23 @@ export const Partners = () => {
 }
 
 export const Privacy = () => {
+    useEffect(() => {
+        const main = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#privacy',
+                start: 'top 70%',
+                // end: 'bottom 60%',
+                toggleActions: "play none none reverse",
+            }
+        });
+
+        main.fromTo(".privacy", { duration: 1, opacity: 0, scale: 0.3, ease: "bounce.out", x: 400, delay: .5 }, { duration: 1.5, opacity: 1, scale: 1, ease: "back", x: 0, delay: .2 });
+
+
+
+    }, []);
     return (
-        <div className={`border-b-[1px] p-5 space-y-8 border-[#FFFFFF2E] md:space-x-5 md:px-20 md:py-14 flex flex-col md:flex-row justify-center items-center md:items-start relative`}>
+        <div className={`border-b-[1px] p-5 space-y-8 border-[#FFFFFF2E] md:space-x-5 md:px-20 md:py-14 flex flex-col md:flex-row justify-center items-center md:items-start relative`} id='privacy'>
             <div className='md:space-y-14 space-y-8 w-5/6 md:w-[550px]   '>
                 <div className='flex flex-col w-full  text-center md:text-left space-y-5 items-center md:items-start'>
                     <h1 className={`${revalia.className} text-base md:text-lg`}>
@@ -694,7 +709,7 @@ export const Privacy = () => {
                 </div>
 
             </div>
-            <div className=" relative md:w-[600px] h-[400px] md:h-[750px] w-11/12 flex items-center  justify-center mx-auto">
+            <div className=" relative md:w-[600px] h-[400px] md:h-[750px] w-11/12 flex items-center privacy justify-center mx-auto">
                 <Image src={privacy} fill alt="" />
             </div>
         </div>
