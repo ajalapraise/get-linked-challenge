@@ -49,7 +49,7 @@ const MySlider1 = () => {
     };
     return (
         <div className="image-gallery relative">
-            {imageData.map((image, index) => (
+            {/* {imageData.map((image, index) => (
                 <div
                     key={index}
                     className={`${index === currentImageIndex ? "z-50" : ""}image-container relative w-[400px] border-[1px] bg-purple1 flex justify-center items-center border-[red] h-[400px] right-20`}
@@ -64,7 +64,7 @@ const MySlider1 = () => {
                     <Image src={image.url} alt={image.description} />
                 </div>
             ))}
-            <button onClick={nextImage} className='text-[yellow]'>Next</button>
+            <button onClick={nextImage} className='text-[yellow]'>Next</button> */}
 
         </div>
     );
