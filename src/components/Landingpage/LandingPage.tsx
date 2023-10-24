@@ -36,6 +36,9 @@ gsap.config({
 
 
 
+// Define an array of objects, each with "url" and "description" properties
+
+
 
 export const Intro = () => {
     useEffect(() => {
